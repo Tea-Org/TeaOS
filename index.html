@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TeaOS</title>
     <link rel="stylesheet" href="assets/css/reset.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <div class="window">
-        <div class="header">
-            <div class="buttons">
-                <img src="assets/img/button_minimize.png" id="minimize" alt="">
-                <img src="assets/img/button_maximize.png" id="maximize" alt="">
-                <img src="assets/img/button_close.png" id="close" alt="">
+    <div class="page">
+        <div class="window">
+            <div class="header">
+                <div class="buttons">
+                    <img src="assets/img/button_minimize.png" id="minimize" alt="">
+                    <img src="assets/img/button_maximize.png" id="maximize" alt="">
+                    <img src="assets/img/button_close.png" id="close" alt="">
+                </div>
+                <div class="app">
+                    <img src="assets/img/logo.png" alt="">
+                    <p>Hello</p>
+                </div>
+                <div class="bar"></div>
             </div>
-            <div class="app">
-                <img src="assets/img/logo.png" alt="">
-                <p>Hello</p>
+            <div class="body">
+                <iframe src="https://google.com/"></iframe>
             </div>
-            <div class="bar"></div>
-        </div>
-        <div class="body">
-            <iframe src="https://kellis.fr"></iframe>
         </div>
     </div>
 
     <img class="wallpaper" src="assets/img/wallpaper.jpg" alt="">
 
     <script src="assets/js/drag.js"></script>
+    <script src="assets/js/include.js"></script>
 </body>
 </html>

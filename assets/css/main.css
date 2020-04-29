@@ -1,0 +1,80 @@
+@font-face {
+    src: url('../font/CONTAX\ W01\ 25\ ULTRA\ LIGHT.TTF');
+    font-family: contax
+}
+html, body {
+    color: #fff;
+    font-family: contax;
+    overflow: hidden
+}
+.window {
+    width: 780px;
+    height: 650px;
+    position: absolute;
+
+    margin: auto;
+
+    border-radius: 20px 20px 0 0;
+
+    display: inline-block;
+    resize: vertical;
+
+}
+.header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    border-radius: 20px 20px 0 0;
+}
+.bar {
+    background:-moz-linear-gradient(0deg,#202124 0,#2a2b2e 100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.buttons {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    top: 0; bottom: 0; right: 5px;
+}
+.buttons img, .app img {
+    padding: 0 4px 0 4px;
+    width: 14px
+}
+.app {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    top: 0; bottom: 0;left: 5px;
+}
+.app p {
+    font-size: 20px;
+    padding-left: 4px;
+    font-weight: bold
+}
+.body {
+    background-color: #202124;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.9
+}
+iframe {
+    width: 100%;
+    height: 100%
+}
+#minimize:hover {
+    background-color: #2a2b2e80
+}
+
+
+.wallpaper {
+    width: 100%;
+
+    position: absolute;
+    z-index: -999
+}

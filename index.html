@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeaOS</title>
     <link rel="stylesheet" href="assets/css/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <div class="page">
+    <div class="toolbar">
+        <div class="right">
+            <p class="internet"><i class="fas fa-network-wired"></i></p>
+            <p class="battery"><i class="fas fa-battery-full"></i></p>
+            <p class="hour"></p>
+            <p class="logout"><i class="fas fa-power-off"></i></p>
+
+        </div>
+    </div>
+
+    <div class="desktop">
+        <div class="icons-dekstop"></div>
+    </div>
+    <div class="page" style="display: none">
         <div class="window">
             <div class="header">
                 <div class="buttons">
@@ -27,10 +41,22 @@
             </div>
         </div>
     </div>
-
-    <img class="wallpaper" src="assets/img/wallpaper.jpg" alt="">
-
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="assets/js/drag.js"></script>
     <script src="assets/js/include.js"></script>
+    <script src="assets/js/toolbar.js"></script>
+    <script src="assets/js/desktop.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            botBensonWindowsWeb.entity(  );
+            botBensonWindowsWeb.dragAndDropChange( true );
+        
+            botBensonWindowsWeb.createEntity( 'bonjour' , { top: 0 , left: 0 } );        
+        });
+        
+        </script>
 </body>
 </html>

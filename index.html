@@ -20,7 +20,7 @@
     </div>
 
     <div class="desktop">
-        <div class="icons-dekstop"></div>
+        <div class="icons-dekstop"><div class="icon-desktop ui-draggable ui-draggable-handle" style="height:90px;width:70px; top:0px;left:0px" data-id="0"><a href="#"><img src="assets/img/logos/globe.png"><span>Internet</span></a></div></div>
     </div>
     <div class="page" style="display: none">
         <div class="window">
@@ -46,17 +46,21 @@
     <script src="assets/js/drag.js"></script>
     <script src="assets/js/include.js"></script>
     <script src="assets/js/toolbar.js"></script>
-    <script src="assets/js/desktop.js"></script>
+    <!--<script src="assets/js/desktop.js"></script>-->
+    <script src="assets/js/display.js"></script>
+    
 
     <script type="text/javascript">
 
-        $(document).ready(function(){
-            botBensonWindowsWeb.entity(  );
-            botBensonWindowsWeb.dragAndDropChange( true );
-        
-            botBensonWindowsWeb.createEntity( 'bonjour' , { top: 0 , left: 0 } );        
-        });
-        
+$(document).ready(function(){
+
+botBensonWindowsWeb.changContextMenuStart();
+botBensonWindowsWeb.dragAndDropChange( true );
+
+botBensonWindowsWeb.createEntity( 'Internet' , { top: 0 , left: 0 } );
+
+});
+    
         </script>
 </body>
 </html>

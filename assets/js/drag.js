@@ -1,17 +1,15 @@
 
 for (i=0; i < 10; i++) {
-  dragElementWindow(document.getElementsByClassName("icon-desktop")[0]);
-
   dragElementWindow(document.getElementsByClassName("window")[i]);
   function dragElementWindow(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementById(elmnt.class + "header")) {
+      if (document.getElementsByClassName(elmnt.class)[i]) {
         // if present, the header is where you move the DIV from:
-        document.getElementById(elmnt.class + "header").onmousedown = dragMouseDownWindow;
+        document.getElementsByClassName(elmnt.class)[i].onmousedown = dragMouseDownWindow;
       } else {
         // otherwise, move the DIV from anywhere inside the DIV:
         elmnt.onmousedown = dragMouseDownWindow;
-      
+      icons-dekstop
     }
   
     function dragMouseDownWindow(e) {
@@ -46,6 +44,7 @@ for (i=0; i < 10; i++) {
     function closeDragElementWindow() {
       // stop moving when mouse button is released:
       document.onmouseup = null;
-      document.onmousemove = null;  }
+      document.onmousemove = null;  
+    }
   }
 }

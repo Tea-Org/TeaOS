@@ -45,35 +45,17 @@ var botBensonWindowsWeb = {
 			"width"  : 70
 
 		},
+		"console" : 
+		{
+			"name"  : "TeaOS Console",
+			"image" : "assets/img/console.png"
+		
+		},
 		"Internet" : 
 		{
 			"name"  : "Internet",
 			"image" : "assets/img/logos/globe.png"
-		},
-		"folder-empty" :
-		{
-			"name"  : "Folder",
-			"image" : "images/desktop/folder-empty.png"
-		},
-		"computer" :
-		{
-			"name"  : "My Computer",
-			"image" : "images/desktop/my-computer.png"
-		},
-		"text-document" :
-		{
-			"name"  : "Text Document",
-			"image" : "images/desktop/text-document.png"
-		},		
-		"trash-empty" : 
-		{
-			"name"  : "Trash",
-			"image" : "images/desktop/trash-empty.png"
-		},
-		"visual-code":
-		{
-			"name"  : "Visual Code",
-			"image" : "images/desktop/visual-code.png"
+		
 		},	
 	},
 

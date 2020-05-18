@@ -20,34 +20,68 @@
     </div>
 
     <div class="desktop">
-        <div class="icons-dekstop"><div class="icon-desktop ui-draggable ui-draggable-handle" style="height:90px;width:70px; top:0px;left:0px" data-id="0"><a href="#"><img src="assets/img/logos/globe.png"><span>Internet</span></a></div></div>
+        <div class="icons-dekstop">
+            <div class="icon-desktop ui-draggable ui-draggable-handle" style="height:90px;width:70px; top:0px;left:0px" data-id="0">
+                <a href="#">
+                    <img src="assets/img/logos/globe.png">
+                    <span>Internet</span>
+                </a>
+            </div>
+            <div class="icon-desktop ui-draggable ui-draggable-handle" style="height:90px;width:70px; top:100px;left:0px" data-id="0">
+                <a href="#">
+                    <img src="assets/img/console.png">
+                    <span>TeaOS Console</span>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="page" style="display: none">
         <div class="window">
             <div class="header">
                 <div class="buttons">
-                    <img src="assets/img/button_minimize.png" id="minimize" alt="">
-                    <img src="assets/img/button_maximize.png" id="maximize" alt="">
-                    <img src="assets/img/button_close.png" id="close" alt="">
+                    <img src="assets/img/button_minimize.png" class="minimize" alt="">
+                    <img src="assets/img/button_maximize.png" class="maximize" alt="">
+                    <img src="assets/img/button_close.png" class="close" alt="">
                 </div>
                 <div class="app">
-                    <img src="assets/img/logo.png" alt="">
-                    <p>Hello</p>
+                    <img src="assets/img/logos/globe.png" alt="">
+                    <p>Internet</p>
                 </div>
                 <div class="bar"></div>
             </div>
             <div class="body">
-                <iframe src="https://google.com/"></iframe>
+                <iframe src="https://kellis.fr/demo/"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" style="display: none">
+        <div class="window">
+            <div class="header">
+                <div class="buttons">
+                    <img src="assets/img/button_minimize.png" class="minimize" alt="">
+                    <img src="assets/img/button_maximize.png" class="maximize" alt="">
+                    <img src="assets/img/button_close.png" class="close" alt="">
+                </div>
+                <div class="app">
+                    <img src="assets/img/console.png" alt="">
+                    <p>TeaOS Console</p>
+                </div>
+                <div class="bar"></div>
+            </div>
+            <div class="body">
+                <iframe src="https://kellis.fr/demo/v4"></iframe>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-    <script src="assets/js/drag.js"></script>
     <script src="assets/js/include.js"></script>
     <script src="assets/js/toolbar.js"></script>
-    <!--<script src="assets/js/desktop.js"></script>-->
+    <script src="assets/js/desktop.js"></script>
     <script src="assets/js/display.js"></script>
+    <script src="assets/js/drag.js"></script>
+
     
 
     <script type="text/javascript">
@@ -57,7 +91,6 @@ $(document).ready(function(){
 botBensonWindowsWeb.changContextMenuStart();
 botBensonWindowsWeb.dragAndDropChange( true );
 
-botBensonWindowsWeb.createEntity( 'Internet' , { top: 0 , left: 0 } );
 
 });
     

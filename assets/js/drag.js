@@ -1,11 +1,11 @@
 
-for (i=0; i < 10; i++) {
+for (let i=0; i < 10; i++) {
   dragElementWindow(document.getElementsByClassName("window")[i]);
   function dragElementWindow(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementsByClassName(elmnt.class)[i]) {
+      if (document.getElementsByClassName("header")[i]) {
         // if present, the header is where you move the DIV from:
-        document.getElementsByClassName(elmnt.class)[i].onmousedown = dragMouseDownWindow;
+        document.getElementsByClassName("header")[i].onmousedown = dragMouseDownWindow;
       } else {
         // otherwise, move the DIV from anywhere inside the DIV:
         elmnt.onmousedown = dragMouseDownWindow;

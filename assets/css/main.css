@@ -146,3 +146,13 @@ iframe {
     padding-right: 10px;
     cursor: pointer
 }
+
+@keyframes fadeDown {
+	0% {
+		opacity: 1
+	}
+	100% {
+		opacity: 0
+	}
+}
+

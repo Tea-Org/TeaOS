@@ -43,6 +43,9 @@ window.addEventListener("DOMContentLoaded", () => {
 				window[i].style.top = '35px';
 				window[i].style.left = '0';
 
+				body[i].style.display = 'block';
+				app_title[i].style.display = 'block';
+
 				j = 1;
 			} else {
 				window[i].style.width = '780px';

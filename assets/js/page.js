@@ -13,10 +13,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	let j = 0;
 	let k = 0;
+	let l = 0;
 
 	for (let i = 0; i < 2; i++) {
 		icons[i].addEventListener("dblclick", () => {
 			page[i].style.display = 'block';
+		});
+
+		window[i].addEventListener("click", () => {
+			window[i].style.zIndex = l;
+			l++;
 		});
 
 		close[i].addEventListener("click", () => {

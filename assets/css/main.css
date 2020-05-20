@@ -155,4 +155,6 @@ iframe {
 		opacity: 0
 	}
 }
-
+.right p:hover {
+    color: rgb(189, 189, 189);
+}

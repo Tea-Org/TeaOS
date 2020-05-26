@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	const window = document.getElementsByClassName('window');
 	const body = document.getElementsByClassName('body');
 	const app_title = document.getElementsByClassName('app_title');
+	const iframe = document.getElementsByTagName('iframe');
 
 	const minimize = document.getElementsByClassName('minimize');
 	const maximize = document.getElementsByClassName('maximize');
@@ -17,6 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	for (let i = 0; i < 2; i++) {
 		icons[i].addEventListener("dblclick", () => {
+			iframe[i].src = 'iframe/'+iframe[i].id;
 			page[i].style.display = 'block';
 		});
 
@@ -26,6 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		});
 
 		close[i].addEventListener("click", () => {
+			iframe[i].src = '';
 			page[i].style.display = 'none';
 		});
 		close[i].addEventListener("mouseover", () => {

@@ -10,13 +10,21 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <div class="toolbar">
-        <div class="right">
-            <p class="internet"><i class="fas fa-network-wired"></i></p>
-            <p class="battery"><i class="fas fa-battery-full"></i></p>
-            <p class="hour"></p>
-            <p class="logout"><i class="fas fa-power-off"></i></p>
-
+    <div class="head">
+        <div class="toolbar">
+            <div class="right">
+                <p class="taskb internet"><i class="fas fa-network-wired"></i></p>
+                <p class="taskb battery"><i class="fas fa-battery-full"></i></p>
+                <p class="taskb hour"></p>
+                <p class="taskb logout"><i class="fas fa-power-off"></i></p>
+            </div>
+        </div>
+        <div class="task_box" style="display: none">
+            <div class="task">
+                <p class="battery"><i class="fas fa-battery-full"></i></p>
+                <p class="font"> 100%</p>
+                <p class="sec_font">Charged</p>
+            </div>
         </div>
     </div>
 
@@ -79,19 +87,6 @@
     <script src="assets/js/jqueryui.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="assets/js/include.js"></script>
     <script src="assets/js/toolbar.js"></script>
-    <script src="assets/js/desktop.js"></script>
     <script src="assets/js/page.js"></script>
-
-    <script type="text/javascript">
-
-$(document).ready(function(){
-
-botBensonWindowsWeb.changContextMenuStart();
-botBensonWindowsWeb.dragAndDropChange( true );
-
-
-});
-    
-        </script>
 </body>
 </html>

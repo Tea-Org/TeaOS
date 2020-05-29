@@ -80,6 +80,9 @@ input {
     border-radius: 10px;
     box-shadow: #a400ae 0 0 24px;
 }
+button:hover {
+    cursor: pointer
+}
 
 .footer {
     display: flex;

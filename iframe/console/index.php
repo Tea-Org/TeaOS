@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Web Console v0.9.7 (2016-11-05)
 //
 // Author: Nickolay Kovalev (http://nickola.ru)
@@ -11,8 +12,8 @@ $NO_LOGIN = true;
 
 // Single-user credentials
 // Example: $USER = 'user'; $PASSWORD = 'password';
-$USER = '';
-$PASSWORD = '';
+$USER = $_SESSION['username'];
+$PASSWORD = $_SESSION['password'];;
 
 // Multi-user credentials
 // Example: $ACCOUNTS = array('user1' => 'password1', 'user2' => 'password2');

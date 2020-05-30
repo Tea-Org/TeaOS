@@ -13,7 +13,7 @@
     <div class="left">
         <div class="block">
             <p class="hour"></p>
-            <p class="date">Ven. 29 Mai</p>
+            <p class="date"></p>
         </div>    
     </div>
     <div class="right">
@@ -22,7 +22,7 @@
                 <input type="text" placeholder="Username">
             </div>
             <div class="input">
-                <input type="text" placeholder="Password">
+                <input type="password" placeholder="Password">
             </div>
             <div class="button">
                 <button>Login</button>
@@ -31,25 +31,9 @@
     </div>
     <div class="footer">
         <img src="assets/img/logo.png">
-        <p>TeaOS 20.5</p>
+        <p>TeaOS <?php echo (file_get_contents('version')) ?></p>
     </div>
-    <script>
-        var hour = document.getElementsByClassName('hour')[0];
-        var date = document.getElementsByClassName('date')[0];
-
-        window.onload = function hourK() {
-            var ladate=new Date()
-            var h=ladate.getHours();
-            if (h<10) {h = "0" + h}
-            var m=ladate.getMinutes();
-            if (m<10) {m = "0" + m}
-            hour.innerHTML = h+":"+m
-
-            const options = { weekday: 'short', month: 'long', day: 'numeric' };
-            date.innerHTML = ladate.toLocaleDateString('fr-FR', options).charAt(0).toUpperCase() + ladate.toLocaleDateString('fr-FR', options).slice(1)
-
-            setTimeout(hourK, 1000)
-        }
-    </script>
+    <script src="assets/js/date.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 </html>

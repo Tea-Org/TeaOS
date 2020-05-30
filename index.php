@@ -7,7 +7,7 @@ if (isset($_GET['page'])) {
             if (isset($_SESSION['id'])) {
                 header('Location: ?page=desktop');
             } else {
-                include('pages/login.html');
+                include('pages/login.php');
             }
         break;
         case 'desktop':

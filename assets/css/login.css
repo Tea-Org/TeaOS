@@ -66,7 +66,7 @@ p.date {
     font-size: 32px;
     font-family: contax;
     margin: 0 20px 0 20px;
-    border: none;
+    border-style: none;
     border-radius: 10px;
     box-shadow: #a400ae 0 0 24px;
 }
@@ -76,12 +76,17 @@ input {
     font-size: 32px;
     font-family: contax;
     padding: 0 20px 0 20px;
-    border: none;
+    border-style: none;
     border-radius: 10px;
-    box-shadow: #a400ae 0 0 24px;
+    box-shadow: #fff 0 0 24px;
 }
 button:hover {
-    cursor: pointer
+    transition: .5s;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    box-shadow: #fff 0 0 24px;
+    mix-blend-mode: soft-light;
 }
 
 .footer {

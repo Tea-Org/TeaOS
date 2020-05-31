@@ -19,8 +19,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 if (resp[0] == "ok") {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Success',
-                        text: 'Nice to see you again ' + resp[1],
+                        title: 'Welcome',
+                        text: 'Nice to see you again ' + resp[1] + ' !',
                         showConfirmButton: false,
                         timer: 1500
                     }).then ((result) => {window.location.reload(false)})
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         icon: 'error',
                         title: 'Oops...',
                         text: request.responseText
-                    })
+                    }).then ((result) => {input[1].value = ""})
                 }
             }
         }

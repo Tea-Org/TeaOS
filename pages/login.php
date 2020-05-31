@@ -7,6 +7,7 @@
     <title>TeaOS · FREE ONLINE OPERATING SYSTEM FOR ALL</title>
     <link rel="stylesheet" href="assets/css/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
@@ -33,6 +34,8 @@
         <img src="assets/img/logo.png">
         <p>TeaOS <?php echo (file_get_contents('version')) ?></p>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+
     <script src="assets/js/date.js"></script>
     <script src="assets/js/login.js"></script>
 </body>

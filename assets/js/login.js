@@ -15,7 +15,22 @@ window.addEventListener("DOMContentLoaded", () => {
         request.onreadystatechange = function()
         {
             if (request.readyState === 4) {
-                alert(request.responseText);
+                const resp = request.responseText.split("|");
+                if (resp[0] == "ok") {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'Nice to see you again ' + resp[1],
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then ((result) => {window.location.reload(false)})
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: request.responseText
+                    })
+                }
             }
         }
     });

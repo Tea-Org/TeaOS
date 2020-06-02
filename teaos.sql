@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 01 juin 2020 à 21:52
+-- Généré le :  mar. 02 juin 2020 à 21:16
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -17,6 +17,16 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données :  `teaos`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
@@ -35,6 +45,23 @@ CREATE TABLE IF NOT EXISTS `users` (
   `unik` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `visits`
+--
+
+DROP TABLE IF EXISTS `visits`;
+CREATE TABLE IF NOT EXISTS `visits` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `ip` varchar(255) NOT NULL,
+  `motor` varchar(1000) NOT NULL,
+  `SCRIPT_NAME` varchar(1000) NOT NULL,
+  `timestamp` int(20) NOT NULL,
+  `date` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

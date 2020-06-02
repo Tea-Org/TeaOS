@@ -1,4 +1,7 @@
 admin/
+admin/*
+users/
+users/*
 
 # Logs
 logs

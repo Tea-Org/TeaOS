@@ -12,6 +12,13 @@
 	$yesterday_visitors = $reqabcd->rowCount();
 
 	$difference = ($today_visitors / $yesterday_visitors)*100;
+
+	$files = count(scandir('../users'), COUNT_RECURSIVE);
+
+	$reqabcd = $bdd->prepare("SELECT * FROM users");
+	$reqabcd->execute(array());
+	$total_users = $reqabcd->rowCount();
+
 ?>
 <div class=content-wrapper>
 	<div class=content-header>
@@ -60,11 +67,11 @@
 					<div class="info-box bg-warning">
 						<span class=info-box-icon><i class="far fa-folder-open"></i></span>
 						<div class=info-box-content>
-							<span class=info-box-text>Files</span> <span class=info-box-number>41,410</span>
+							<span class=info-box-text>Files</span> <span class=info-box-number><?php echo $files; ?></span>
 							<div class=progress>
-								<div class=progress-bar style=width:70%></div>
+								<div class=progress-bar style=width:100%></div>
 							</div>
-							<span class=progress-description>70% Increase in 30 Days</span>
+							<span class=progress-description>Since the TeaOS beginning</span>
 						</div>
 					</div>
 				</div>
@@ -72,16 +79,16 @@
 					<div class="info-box bg-danger">
 						<span class=info-box-icon><i class="fas fa-user-secret"></i></span>
 						<div class=info-box-content>
-							<span class=info-box-text>Users</span> <span class=info-box-number>41,410</span>
+							<span class=info-box-text>Users</span> <span class=info-box-number><?php echo $total_users; ?></span>
 							<div class=progress>
-								<div class=progress-bar style=width:70%></div>
+								<div class=progress-bar style=width:100%></div>
 							</div>
-							<span class=progress-description>70% Increase in 30 Days</span>
+							<span class=progress-description>Since the TeaOS beginning</span>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class=row>
+			<!--<div class=row>
 				<section class="col-lg connectedSortable">
 					
 					<div class="card bg-gradient-info">
@@ -98,7 +105,7 @@
 						</div>
 					</div>
 				</section>
-			</div>
+			</div>-->
 		</div>
 	</section>
 </div>

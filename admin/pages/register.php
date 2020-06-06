@@ -1,4 +1,15 @@
-<div class=content-wrapper>
+<?php
+session_start();
+
+if (isset($_GET['page'])) {
+if (isset($_SESSION['id'])) {
+    include('../include/json/bdd.php');
+
+    $reqabcd = $bdd->prepare("SELECT * FROM users WHERE id = ?");
+    $reqabcd->execute(array($_SESSION['id']));
+    $userinfo = $reqabcd->fetch();
+
+    if ($userinfo['perm'] == 1) { ?><div class=content-wrapper>
 	<div class=content-header>
 		<div class=container-fluid>
 			<div class="row mb-2">
@@ -44,3 +55,14 @@
         </div>
 	</section>
 </div>
+<?php
+    } else {
+        echo 'You\'re not allowed to display this page';
+    }
+} else {
+    header('Location: ../');
+}
+} else {
+    header('Location: ../');
+}
+?>

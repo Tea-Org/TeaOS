@@ -1,8 +1,9 @@
 <?php
-include('../include/json/bdd.php');
 session_start();
 
 if (isset($_SESSION['id'])) {
+    include('../include/json/bdd.php');
+
     $reqabcd = $bdd->prepare("SELECT * FROM users WHERE id = ?");
     $reqabcd->execute(array($_SESSION['id']));
     $userinfo = $reqabcd->fetch();
@@ -29,4 +30,6 @@ if (isset($_SESSION['id'])) {
     } else {
         echo 'You\'re not allowed to display this page';
     }
+} else {
+    header('Location: ../');
 }

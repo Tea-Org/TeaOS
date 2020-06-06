@@ -8,12 +8,12 @@ session_start();
 
 // Disable login (don't ask for credentials, be careful)
 // Example: $NO_LOGIN = true;
-$NO_LOGIN = true;
+$NO_LOGIN = false;
 
 // Single-user credentials
 // Example: $USER = 'user'; $PASSWORD = 'password';
-$USER = $_SESSION['username'];
-$PASSWORD = $_SESSION['password'];;
+$USER = 'user';
+$PASSWORD = 'password';
 
 // Multi-user credentials
 // Example: $ACCOUNTS = array('user1' => 'password1', 'user2' => 'password2');

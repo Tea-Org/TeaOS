@@ -1,12 +1,12 @@
 <?php
-if ($bdd = new PDO('mysql:host=localhost;dbname=teaos', 'root', '')) {
+$bdd = new PDO('mysql:host=localhost;dbname=teaos', 'root', '');
     session_start();
     if(isset($_POST['login'])){
         if(!empty($_POST['username']) AND !empty($_POST['password'])) {
             $username = htmlspecialchars($_POST['username']);
-            $passwordword = md5($_POST['password']);
+            $password = md5($_POST['password']);
 
-            $requser = $bdd->prepare("SELECT * FROM users WHERE email = ? AND pass = ?");
+            $requser = $bdd->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
             $requser->execute(array($username, $password));
             $userexist = $requser->rowCount();
             if($userexist == 1) {
@@ -34,6 +34,3 @@ if ($bdd = new PDO('mysql:host=localhost;dbname=teaos', 'root', '')) {
         echo "Error";
         header ("Location: /");
     }
-} else {
-    echo "Ouchh";
-}

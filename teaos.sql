@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 06 juin 2020 à 22:31
+-- Généré le :  sam. 06 juin 2020 à 23:19
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -31,8 +31,8 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
-  `username` varchar(25) NOT NULL,
-  `password` varchar(25) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(32) NOT NULL,
   `ip_reg` varchar(100) NOT NULL,
   `ip` varchar(100) NOT NULL,
   `navigateur` varchar(255) NOT NULL,

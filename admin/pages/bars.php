@@ -1,5 +1,15 @@
+<?php
+session_start();
 
+if (isset($_GET['page'])) {
+if (isset($_SESSION['id'])) {
+    include('../include/json/bdd.php');
 
+    $reqabcd = $bdd->prepare("SELECT * FROM users WHERE id = ?");
+    $reqabcd->execute(array($_SESSION['id']));
+    $userinfo = $reqabcd->fetch();
+
+    if ($userinfo['perm'] == 1) { ?>
 <!DOCTYPE html>
 <meta charset=utf-8>
 <meta content="IE=edge"http-equiv=X-UA-Compatible>
@@ -56,3 +66,14 @@
 		</div>
 	</aside>
 
+	<?php
+    } else {
+        echo 'You\'re not allowed to display this page';
+    }
+} else {
+    header('Location: ../');
+}
+} else {
+    header('Location: ../');
+}
+?>

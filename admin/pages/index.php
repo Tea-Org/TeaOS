@@ -11,7 +11,11 @@
 	$reqabcd->execute(array(date('d-m-Y', time()-86400)));
 	$yesterday_visitors = $reqabcd->rowCount();
 
-	$difference = ($today_visitors / $yesterday_visitors)*100;
+	if ($yesterday_visitors == 0) {
+		$difference = $today_visitors * 100;
+	} else {
+		$difference = ($today_visitors / $yesterday_visitors)*100;
+	}
 
 	$files = count(scandir('../users'), COUNT_RECURSIVE);
 

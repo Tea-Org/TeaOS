@@ -28,15 +28,22 @@
 		<a class="navbar-indigo brand-link" href="" ><img class="brand-image elevation-3 img-circle"src=../assets/img/logo.png style=opacity:.8> <span class="brand-text font-weight-light">TeaOS | Admin Panel</span></a>
 		<div class=sidebar>
 			<div class="d-flex mb-3 mt-3 pb-3 user-panel">
-				<div class=info><a class=d-block href=#><?php $_SESSION['username']; ?></a></div>
+				<div class=info><a class=d-block href=#><?php $userinfo['username']; ?></a></div>
 			</div>
 			<nav class=mt-2>
 				<ul class="flex-column nav nav-pills nav-sidebar"data-accordion=false data-widget=treeview role=menu>
 					<li class=nav-item>
-						<a class="nav-link active"href=#>
+						<a class="nav-link active"href="?page=index">
 							<i class="fas fa-tachometer-alt nav-icon"></i>
 							<p>Dashboard</p>
 						</a>
+					</li>
+					<li class=nav-item>
+						<a class="nav-link"href="?page=register">
+							<i class="fas fa-users nav-icon"></i>
+							<p>Register</p>
+						</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

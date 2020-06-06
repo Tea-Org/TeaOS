@@ -5,10 +5,11 @@
 <meta content="IE=edge"http-equiv=X-UA-Compatible>
 <title>TeaOS | Admin Panel</title>
 <meta content="width=device-width,initial-scale=1"name=viewport>
-<link href=plugins/fontawesome-free/css/all.min.css rel=stylesheet>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css rel=stylesheet>
 <link href=https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css rel=stylesheet>
-<link href=plugins/datatables-bs4/css/dataTables.bootstrap4.min.css rel=stylesheet>
-<link href=plugins/datatables-responsive/css/responsive.bootstrap4.min.css rel=stylesheet>
+<link href=https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css rel=stylesheet>
+<link href=https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css rel=stylesheet>
+
 <link href=dist/css/adminlte.min.css rel=stylesheet>
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"rel=stylesheet>
 <body class="hold-transition sidebar-mini">
@@ -42,6 +43,12 @@
 						<a class="nav-link"href="?page=register">
 							<i class="fas fa-users nav-icon"></i>
 							<p>Register</p>
+						</a>
+					</li>
+					<li class=nav-item>
+						<a class="nav-link"href="?page=user_list">
+							<i class="fas fa-list nav-icon"></i>
+							<p>Userlist</p>
 						</a>
 					</li>
 				</ul>

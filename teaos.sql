@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 02 juin 2020 à 21:16
+-- Généré le :  sam. 06 juin 2020 à 22:31
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `screen` varchar(255) NOT NULL,
   `perm` int(1) NOT NULL,
   `unik` varchar(255) NOT NULL,
+  `reg_by_admin` int(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

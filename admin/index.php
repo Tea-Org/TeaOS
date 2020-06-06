@@ -6,6 +6,7 @@ if (isset($_SESSION['id'])) {
     $reqabcd = $bdd->prepare("SELECT * FROM users WHERE id = ?");
     $reqabcd->execute(array($_SESSION['id']));
     $userinfo = $reqabcd->fetch();
+
     if ($userinfo['perm'] == 1) { 
         include('pages/bars.php');
         if (isset($_GET['page'])) {
@@ -14,9 +15,12 @@ if (isset($_SESSION['id'])) {
                     default:
                     include('pages/index.php');
                     break;
-                case 'register':
-                    include('pages/register.php');
-                    break;
+                    case 'register':
+                        include('pages/register.php');
+                        break;
+                        case 'user_list':
+                            include('pages/user_list.php');
+                            break;
             }
         } else {
             include('pages/index.php');

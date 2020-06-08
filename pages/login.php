@@ -34,9 +34,11 @@
         <img src="assets/img/logo.png">
         <p>TeaOS <?php echo (file_get_contents('version')) ?></p>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
     <script src="assets/js/date.js"></script>
     <script src="assets/js/login.js"></script>
+    <script src="assets/js/screen_verified.js"></script>
+
 </body>
 </html>

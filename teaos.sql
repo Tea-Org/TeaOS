@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 06 juin 2020 à 23:19
+-- Généré le :  lun. 08 juin 2020 à 21:22
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -21,6 +21,22 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `teaos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `banned_ip`
+--
+
+DROP TABLE IF EXISTS `banned_ip`;
+CREATE TABLE IF NOT EXISTS `banned_ip` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `ip` varchar(100) NOT NULL,
+  `date` int(15) NOT NULL,
+  `date_finish` int(15) NOT NULL,
+  `reason` varchar(1000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

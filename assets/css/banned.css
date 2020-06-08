@@ -1,0 +1,29 @@
+@font-face {
+    src: url('../font/CONTAX\ W01\ 25\ ULTRA\ LIGHT.TTF');
+    font-family: contax
+}
+html, body {
+    color: #e6e0d4;
+    font-family: contax;
+    overflow: hidden;
+    background: url(../img/banned.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center
+}
+.center h1 {
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 10px
+}
+.center h2 {
+    font-size: 24px
+}

@@ -22,7 +22,7 @@ if ($banned == 0) {
             case 'desktop':
             default:
                 if (isset($_SESSION['id'])) {
-                    include('pages/desktop.html');
+                    include('pages/desktop.php');
                 } else {
                     header('Location: ?page=login');
                 }
@@ -30,7 +30,7 @@ if ($banned == 0) {
         }
     } else {
         if (isset($_SESSION['id'])) {
-            include('pages/desktop.html');
+            include('pages/desktop.php');
         } else {
             header('Location: ?page=login');
         }

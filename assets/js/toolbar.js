@@ -3,7 +3,7 @@ var bat = document.getElementsByClassName('battery');
 var font = document.getElementsByClassName('font')[0];
 var sec_font = document.getElementsByClassName('secfont')[0];
 var button = document.getElementsByClassName('taskb');
-var box = document.getElementsByClassName('box');
+var box = document.getElementsByClassName('tiny_box')[0];
 
 
 window.onload = function hourK() {
@@ -18,17 +18,17 @@ window.onload = function hourK() {
 
 window.addEventListener("DOMContentLoaded", () => {
     let l = 0
-    const task_box = document.getElementsByClassName('task_box')[0];
+    var task_box = document.getElementsByClassName('tiny_box')[0];
+    var app_title = document.getElementsByClassName('app_title')[2];
 
     for (let i = 0; i < 10; i++) {
         button[i].addEventListener("click", () => {
             if (l == 0) {
                 task_box.style.display = "block";
-                box[i].style.display = "block";
+                app_title.innerHTML = button[i].id;
                 l = 1
             } else {
                 task_box.style.display = "none";
-                box[i].style.display = "none";
                 l = 0
             }
         });

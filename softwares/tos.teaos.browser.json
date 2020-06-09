@@ -1,0 +1,9 @@
+{
+    "code": "tos.teaos.browser",
+    "name": "TeaOS Browser",
+    "description": "",
+    "version": 1.0,
+
+    "icon": "assets/img/logos/globe.png",
+    "url": ""
+}

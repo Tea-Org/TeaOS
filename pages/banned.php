@@ -10,7 +10,7 @@
 <body>
     <audio src="include/sounds/banned.mp3" autoplay loop></audio>
     <div class="center">
-        <h1>You are banned until <?php echo date('d-m-Y H:i'); ?></h1>
+        <h1>You are banned until <?php echo date('d-m-Y H:i', $banned_info['date_finish']); ?></h1>
         <h2>Reason: <?php echo $banned_info['reason']; ?></h2>
     </div>
 </body>

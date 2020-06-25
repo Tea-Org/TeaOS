@@ -1,3 +1,13 @@
+<?php
+$reqsoftware = $bdd->prepare("SELECT * FROM users_softwares WHERE user_id = ?");
+$reqsoftware->execute(array($_SESSION['id']));
+$software_count = $reqsoftware->rowCount();
+$software = $reqsoftware->fetchAll();
+
+$reqsoftware = $bdd->prepare("SELECT * FROM users WHERE id = ?");
+$reqsoftware->execute(array($_SESSION['id']));
+$userinfo = $reqsoftware->fetch();
+?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -15,12 +25,12 @@
     </div>
 
     <div class="desktop">
-        <div class="icons-dekstop">
+        <div class="icons-desktop">
             <?php 
                 for($i = 0; $i < $software_count; $i++) {
                     $appli = json_decode(file_get_contents('softwares/'.$software[$i]['code'].'.json'));
             ?>
-            <div class="icon-desktop ui-draggable ui-draggable-handle" style="height:90px;width:70px; top:0px;left:0px" data-id="0">
+            <div class="icon-desktop" style="height:90px;width:70px;">
                 <a href="#">
                     <img src="<?php print $appli->{'icon'}; ?>">
                     <span><?php print $appli->{'name'}; ?></span>
@@ -70,8 +80,8 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-    <script src="assets/js/include.js"></script>
     <script src="assets/js/toolbar.js"></script>
     <script src="assets/js/page.js"></script>
+    <script src="assets/js/desktop.js"></script>
 </body>
 </html>

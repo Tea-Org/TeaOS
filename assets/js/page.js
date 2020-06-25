@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	let k = 0;
 	let l = 0;
 
-	for (let i = 0; i < 2; i++) {
+	for (let i = 0; i < icons.length; i++) {
 		icons[i].addEventListener("dblclick", () => {
 			iframe[i].src = 'iframe/'+iframe[i].id;
 			page[i].style.display = 'block';

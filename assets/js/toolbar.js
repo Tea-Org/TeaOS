@@ -16,18 +16,22 @@ window.onload = function hourK() {
     hour.innerHTML = h+":"+m
     setTimeout(hourK, 1000)
 }
-
 function disconnect() {
     window.location = "?action=disconnect";
 }
+
 window.addEventListener("DOMContentLoaded", () => {
     let l = 0
+    let m = 0;
+
+    
+
     var task_box = document.getElementsByClassName('tiny_box')[0];
     var app_title = task_box.getElementsByClassName('app_title')[0];
     const close = task_box.getElementsByClassName('close')[0];
 
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < button.length; i++) {
         button[i].addEventListener("click", () => {
             if (l == 0) {
                 task_box.style.display = "block";
@@ -36,6 +40,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
                 var body = document.createElement("div");
                 body.className = "body";
+
+
                 switch (button[i].id) {
                     case 'Ethernet':
                         if (navigator.onLine === true) {
@@ -64,7 +70,8 @@ window.addEventListener("DOMContentLoaded", () => {
                         break;
 
                     case 'Logout' :
-                        body.innerHTML = '<div class="box"> <p class="eteindre">Turn off this computer now ?</p><p class="message">You\'re actually connected with "<?php echo $userinfo[\'username\']; ?>"</p><p class="other">You\'ll be disconnected in a few seconds</p><div class="pro_bar"></div><div class="dis_but">Disconnect</div></div>'
+                        m = 1;
+                        body.innerHTML = '<div class="box"> <p class="eteindre">Turn off this computer now ?</p><p class="message">You\'re actually connected with "<?php echo $userinfo[\'username\']; ?>"</p><p class="other">You\'ll be disconnected in a few seconds</p><div class="pro_bar"></div><div class="dis_but" onclick="disconnect()">Disconnect</div></div>'
         
                         setTimeout(disconnect, 15000)
                         break;
@@ -83,7 +90,8 @@ window.addEventListener("DOMContentLoaded", () => {
         close.addEventListener("click", () => {
             task_box.style.display = "none";
             task_box.removeChild(task_box.getElementsByClassName("body")[0]);
-            l = 0
+            l = 0;
+            m = 0;
         });
 		close.addEventListener("mouseover", () => {
 			close.src = 'assets/img/button_close_hover.png';

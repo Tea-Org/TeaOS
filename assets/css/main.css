@@ -282,9 +282,9 @@ font-size: 32px
     height: 10px;
     border-radius: 3px;
     
-    animation: Gradient 10s ease infinite, pro 15s ;
-    -moz-animation: Gradient 10s ease infinite, pro 15s ;
-    -webkit-animation: Gradient 10s ease infinite, pro 15s ;
+    animation: Gradient 10s ease infinite, pro 15s linear;
+    -moz-animation: Gradient 10s ease infinite, pro 15s linear;
+    -webkit-animation: Gradient 10s ease infinite, pro 15s linear;
     background: linear-gradient(40deg, rgb(14, 0, 214) ,rgb(50, 132, 255));
     background-size: 400% 400%;
 

@@ -1,4 +1,5 @@
 <?php
+include('pages/SEO.html');
 include('include/json/bdd.php');
 session_start();
 
@@ -11,6 +12,16 @@ $banned = $isbanned->rowCount();
 
 if ($banned == 0) {
     if (isset($_GET['page'])) {
+        
+        $reqsoftware = $bdd->prepare("SELECT * FROM users_softwares WHERE user_id = ?");
+        $reqsoftware->execute(array($_SESSION['id']));
+        $software_count = $reqsoftware->rowCount();
+        $software = $reqsoftware->fetchAll();
+
+        $reqsoftware = $bdd->prepare("SELECT * FROM users WHERE id = ?");
+        $reqsoftware->execute(array($_SESSION['id']));
+        $userinfo = $reqsoftware->fetch();
+
         switch($_GET['page']) {
             case 'login':
                 if (isset($_SESSION['id'])) {

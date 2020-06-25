@@ -1,22 +1,3 @@
-<?php
-
-$reqsoftware = $bdd->prepare("SELECT * FROM users_softwares WHERE user_id = ?");
-$reqsoftware->execute(array($_SESSION['id']));
-$software_count = $reqsoftware->rowCount();
-$software = $reqsoftware->fetchAll();
-
-$reqsoftware = $bdd->prepare("SELECT * FROM users WHERE id = ?");
-$reqsoftware->execute(array($_SESSION['id']));
-$userinfo = $reqsoftware->fetch();
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/logo.png" />
-    <title>TeaOS · FREE ONLINE OPERATING SYSTEM FOR ALL</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">

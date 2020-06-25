@@ -5,6 +5,10 @@ $reqsoftware->execute(array($_SESSION['id']));
 $software_count = $reqsoftware->rowCount();
 $software = $reqsoftware->fetchAll();
 
+$reqsoftware = $bdd->prepare("SELECT * FROM users WHERE id = ?");
+$reqsoftware->execute(array($_SESSION['id']));
+$userinfo = $reqsoftware->fetch();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +28,7 @@ $software = $reqsoftware->fetchAll();
                 <p id="Ethernet" class="taskb internet"><i class="fas fa-network-wired"></i></p>
                 <p id="Battery" class="taskb battery"><i class="fas fa-battery-full"></i></p>
                 <p id="Date and Time" class="taskb hour"></p>
-                <p id="Battery" class="taskb logout"><i class="fas fa-power-off"></i></p>
+                <p id="Logout" class="taskb logout"><i class="fas fa-power-off"></i></p>
             </div>
         </div>
     </div>
@@ -69,8 +73,8 @@ $software = $reqsoftware->fetchAll();
         </div>
     </div>
     <?php
-                }
-            ?>
+        }
+    ?>
     <div class="tiny_box" style="display: none">
         <div class="header">
             <div class="buttons">
@@ -80,9 +84,6 @@ $software = $reqsoftware->fetchAll();
                 <p class="app_title"></p>
             </div>
             <div class="bar"></div>
-        </div>
-        <div class="body">
-            <iframe id="console" src=""></iframe>
         </div>
     </div>
 

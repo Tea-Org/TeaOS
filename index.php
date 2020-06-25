@@ -28,6 +28,13 @@ if ($banned == 0) {
                 }
             break;
         }
+    } elseif (isset($_GET['action'])) {
+        switch ($_GET['action']) {
+            case 'disconnect':
+                default:
+                include('actions/disconnect.php');          
+            break;    
+        }
     } else {
         if (isset($_SESSION['id'])) {
             include('pages/desktop.php');

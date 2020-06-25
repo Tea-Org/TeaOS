@@ -1,8 +1,0 @@
-.console {
-    top: 30px; right: 0;
-    width: 20%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    word-wrap: break-word;
-}

@@ -4,13 +4,14 @@ for (let a = 0; a < iconsa.length; a++) {
     dragElement(iconsa[a]);
     function dragElement(blmnt) {
         var bpos1 = 0, bpos2 = 0, bpos3 = 0, bpos4 = 0;
+
         blmnt.onmousedown = dragMouseDown;
-        
         function dragMouseDown(b) {
             b = b || window.event;
             b.preventDefault();
             bpos3 = b.clientX;
             bpos4 = b.clientY;
+            
             document.onmouseup = closeDragElement;
             document.onmousemove = elementDrag;
         }

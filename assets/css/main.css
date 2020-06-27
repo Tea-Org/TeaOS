@@ -67,9 +67,7 @@ html, body {
     border: 2px solid rgba(255, 255, 255, 0.2);
   }
   
-  .desktop .icon-desktop:first-child {
-    margin-top: 5px;
-  }
+  
   
 .toolbar {
     width:100%;

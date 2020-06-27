@@ -26,7 +26,7 @@ if (isset($_SESSION['id'])) {
         } else {
             include('pages/index.php');
         }
-        include('pages/footer.html');
+        include('pages/footer.php');
     } else {
         echo 'You\'re not allowed to display this page';
     }

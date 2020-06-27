@@ -1,9 +1,8 @@
 <?php
-session_start();
+
 
 if (isset($_GET['page'])) {
 if (isset($_SESSION['id'])) {
-    include('../include/json/bdd.php');
 
     $reqabcd = $bdd->prepare("SELECT * FROM users WHERE id = ?");
     $reqabcd->execute(array($_SESSION['id']));

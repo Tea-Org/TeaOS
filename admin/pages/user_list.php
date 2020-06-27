@@ -36,7 +36,6 @@ if (isset($_SESSION['id'])) {
                   <thead>
                     <tr>
                         <th>Username</th>
-                        <th>Password</th>
                         <th>IP (register)</th>
                         <th>IP (last)</th>
                         <th>Browser</th>
@@ -58,7 +57,6 @@ $usercount = $reqabcde->rowCount();
 
                   <tr>
                     <td><?php echo $users[$i]['username']; ?></td>
-                    <td><?php echo $users[$i]['password']; ?></td>
                     <td><?php echo $users[$i]['ip_reg']; ?></td>
                     <td><?php echo $users[$i]['ip']; ?></td>
                     <td><?php echo $users[$i]['navigateur']; ?></td>

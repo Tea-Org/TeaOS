@@ -72,7 +72,6 @@ $usercount = $reqabcde->rowCount();
                   <tfoot>
                   <tr>
                         <th>Username</th>
-                        <th>Password</th>
                         <th>IP (register)</th>
                         <th>IP (last)</th>
                         <th>Browser</th>

@@ -43,6 +43,7 @@ $userinfo = $reqsoftware->fetch();
     </div>
     <?php
         for($i = 0; $i < $software_count; $i++) {
+            $appli = json_decode(file_get_contents('softwares/'.$software[$i]['code'].'.json'));
     ?>
     <div class="page" style="display: none">
         <div class="window">

@@ -10,9 +10,9 @@ include('recreate.php');
         $reqmail->execute(array($username));
         $mailexist = $reqmail->rowCount();
         if($mailexist == 0) {
-            $insertmbr = $bdd->prepare("INSERT INTO users(username, password, date_reg, perm, unik, reg_by_admin) VALUES(?, ?, UNIX_TIMESTAMP(), ?, ?, 1)");
-            $insertmbr->execute(array($username, $password, intval($_POST['perm']), uniqid()));
             $unik = uniqid();
+
+            $insertmbr = $bdd->prepare("INSERT INTO users(username, password, ip_reg, ip, navigateur, date_reg, date, json_reg, json, perm, screen, unik, reg_by_admin) VALUES(?, ?, 0, 0, 0, UNIX_TIMESTAMP(), 0, 0, 0, 0, ?, ?, 1)");
             $insertmbr->execute(array($username, $password, intval($_POST['perm']), $unik));
 
             mkdir("../../usr/personnal/".$unik);

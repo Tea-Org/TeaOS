@@ -60,8 +60,8 @@ $usercount = $reqabcde->rowCount();
                     <td><?php echo $users[$i]['ip_reg']; ?></td>
                     <td><?php echo $users[$i]['ip']; ?></td>
                     <td><?php echo $users[$i]['navigateur']; ?></td>
-                    <td><?php echo $users[$i]['date_reg']; ?></td>
-                    <td><?php echo $users[$i]['date']; ?></td>
+                    <td><?php echo date('d/m/Y H:i:s', $users[$i]['date_reg']); ?></td>
+                    <td><?php echo date('d/m/Y H:i:s', $users[$i]['date']); ?></td>
                     <td><?php echo $users[$i]['screen']; ?></td>
                     <td><?php echo $users[$i]['unik']; ?></td>
                     <td><?php echo $users[$i]['json_reg']; ?></td>

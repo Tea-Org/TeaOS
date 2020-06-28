@@ -1,5 +1,6 @@
 <?php
 include('../../include/json/bdd.php');
+include('recreate.php');
 
     if(!empty($_POST['username']) AND !empty($_POST['password']) AND isset($_POST['perm'])) {
         $username = strtolower(htmlspecialchars($_POST['username']));
@@ -11,6 +12,11 @@ include('../../include/json/bdd.php');
         if($mailexist == 0) {
             $insertmbr = $bdd->prepare("INSERT INTO users(username, password, date_reg, perm, unik, reg_by_admin) VALUES(?, ?, UNIX_TIMESTAMP(), ?, ?, 1)");
             $insertmbr->execute(array($username, $password, intval($_POST['perm']), uniqid()));
+            $unik = uniqid();
+            $insertmbr->execute(array($username, $password, intval($_POST['perm']), $unik));
+
+            mkdir("../../usr/personnal/".$unik);
+            recreate($unik);
 
             echo 'ok';
             header('Location: ../?page=user_list');

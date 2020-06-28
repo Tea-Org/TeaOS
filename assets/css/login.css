@@ -10,7 +10,7 @@ html, body {
     color: #e6e0d4;
     font-family: contax;
     overflow: hidden;
-    background: url(../img/wallpaper.jpg) no-repeat center fixed; 
+    background: url(../../usr/backgrounds/default.jpg) no-repeat center fixed; 
     -webkit-background-size: cover;
     background-size: cover;
 }

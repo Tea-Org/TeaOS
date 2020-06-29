@@ -1,6 +1,6 @@
 <?php
 
-include('../../etc/json/bdd.php');
+include('../../../etc/json/bdd.php');
 
 if (isset($_POST['search'])) {
     if (isset($_POST['username'])) {

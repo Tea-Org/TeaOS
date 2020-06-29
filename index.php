@@ -33,7 +33,7 @@ if ($banned == 0) {
         switch ($_GET['action']) {
             case 'disconnect':
                 default:
-                include('actions/disconnect.php');          
+                include('boot/actions/disconnect.php');          
             break;    
         }
     } else {

@@ -1,6 +1,6 @@
 <?php
 include('pages/SEO.html');
-include('include/json/bdd.php');
+include('etc/json/bdd.php');
 session_start();
 
 $insertmbr3 = $bdd->prepare('INSERT INTO visits(ip, motor, SCRIPT_NAME, timestamp, date) VALUES(?, ?, ?, UNIX_TIMESTAMP(), ?)');

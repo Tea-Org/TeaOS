@@ -1,0 +1,9 @@
+{
+    "code": "tos.teaos.console",
+    "name": "TeaOS Console",
+    "description": "",
+    "version": 1.0,
+
+    "icon": "etc/img/console.png",
+    "url": ""
+}

@@ -1,5 +1,5 @@
 <?php
-include('../etc/json/bdd.php');
+include('../../etc/json/bdd.php');
     session_start();
     if(isset($_POST['login'])){
         if(!empty($_POST['username']) AND !empty($_POST['password'])) {

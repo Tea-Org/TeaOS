@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
         formData.set("password", input[1].value);
 
         var request = new XMLHttpRequest();
-        request.open('POST', 'actions/login.php', true);
+        request.open('POST', 'boot/actions/login.php', true);
         request.send(formData);
         request.onreadystatechange = function()
         {
@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         text: 'Nice to see you again ' + resp[1] + ' !',
                         showConfirmButton: false,
                         timer: 1500
-                    }).then ((result) => {window.location.reload(false)})
+                    }).then ((result) => {window.location.assign("?page=desktop")})
                 } else {
                     Swal.fire({
                         icon: 'error',

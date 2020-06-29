@@ -1,7 +1,8 @@
 <?php
-include('pages/SEO.html');
-include('etc/json/bdd.php');
 session_start();
+
+include('pages/SEO.php');
+include('etc/json/bdd.php');
 
 $insertmbr3 = $bdd->prepare('INSERT INTO visits(ip, motor, SCRIPT_NAME, timestamp, date) VALUES(?, ?, ?, UNIX_TIMESTAMP(), ?)');
 $insertmbr3->execute(array($_SERVER['REMOTE_ADDR'], $_SERVER["HTTP_USER_AGENT"], $_SERVER["SCRIPT_NAME"], date('d-m-Y')));
@@ -15,7 +16,7 @@ if ($banned == 0) {
         switch($_GET['page']) {
             case 'login':
                 if (isset($_SESSION['id'])) {
-                    header('Location: ?page=desktop');
+                    include('pages/desktop.php');
                 } else {
                     include('pages/login.php');
                 }
@@ -25,7 +26,7 @@ if ($banned == 0) {
                 if (isset($_SESSION['id'])) {
                     include('pages/desktop.php');
                 } else {
-                    header('Location: ?page=login');
+                    include('pages/login.php');
                 }
             break;
         }
@@ -40,7 +41,7 @@ if ($banned == 0) {
         if (isset($_SESSION['id'])) {
             include('pages/desktop.php');
         } else {
-            header('Location: ?page=login');
+            include('pages/login.php');
         }
     }
 } else {

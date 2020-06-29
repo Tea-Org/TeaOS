@@ -20,4 +20,4 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="https://teaos.kellis.fr/" />
     <meta name="twitter:title" content="TeaOS · Free Online Operating System For All" />
-    <meta name="twitter:description" content="Free fast and secure OS for everyone, suitable complements to any OS with different Desktop Environments" />
+    <meta name="twitter:description" content="Free fast and secure OS for everyone, suitable complements to any OS with different Desktop Environments" />';

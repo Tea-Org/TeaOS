@@ -13,6 +13,9 @@ $userinfo = $reqsoftware->fetch();
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    <div class="loading">
+        <img src="assets/img/logo_coloured_v2.png" alt="" id="slidecaption">
+    </div>
     <div class="head">
         <div class="toolbar">
             <div class="right">
@@ -84,5 +87,14 @@ $userinfo = $reqsoftware->fetch();
     <script src="assets/js/toolbar.js"></script>
     <script src="assets/js/page.js"></script>
     <script src="assets/js/desktop.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var div = document.getElementsByClassName('loading')[0];
+            div.style = "animation: fade .5s linear;"
+            setTimeout(() => {
+                div.style.display = "none"
+            }, 500);
+        })
+</script>
 </body>
 </html>

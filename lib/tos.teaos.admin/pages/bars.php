@@ -17,8 +17,8 @@ if (isset($_SESSION['id'])) {
 <link href=https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css rel=stylesheet>
 <link href=https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css rel=stylesheet>
 
-<link href=dist/css/adminlte.min.css rel=stylesheet>
-<link href=dist/css/main.css rel=stylesheet>
+<link href=assets/css/adminlte.min.css rel=stylesheet>
+<link href=assets/css/main.css rel=stylesheet>
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"rel=stylesheet>
 <body class="hold-transition sidebar-mini">
 	<div class=wrapper>

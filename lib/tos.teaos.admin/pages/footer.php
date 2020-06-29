@@ -20,8 +20,8 @@ if (isset($_SESSION['id'])) {
 <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js></script>
-<script src="dist/js/adminlte.js"></script>
-<script src="dist/js/search.js"></script>
+<script src="assets/js/adminlte.js"></script>
+<script src="assets/js/search.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>

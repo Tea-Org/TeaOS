@@ -18,7 +18,7 @@ html, body {
     top:0;
     bottom:0;
     margin:auto;
-
+    overflow: hidden;
     width: 85%;
     height: 35px;
 

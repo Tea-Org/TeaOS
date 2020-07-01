@@ -94,10 +94,10 @@ window.addEventListener("DOMContentLoaded", () => {
             m = 0;
         });
 		close.addEventListener("mouseover", () => {
-			close.src = 'assets/img/button_close_hover.png';
+			close.src = 'etc/img/button_close_hover.png';
 		});
 		close.addEventListener("mouseout", () => {
-			close.src = 'assets/img/button_close.png';
+			close.src = 'etc/img/button_close.png';
 		});
     }
 });

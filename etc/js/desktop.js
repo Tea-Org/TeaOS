@@ -25,11 +25,22 @@ for (let a = 0; a < iconsa.length; a++) {
             bpos4 = b.clientY;
             blmnt.style.top = (blmnt.offsetTop - bpos2) + "px";
             blmnt.style.left = (blmnt.offsetLeft - bpos1) + "px";
+
+            var formData = new FormData();
+            formData.set("id", blmnt.id);
+            formData.set("top", blmnt.style.top);
+            formData.set("left", blmnt.style.left);
+
+            var request = new XMLHttpRequest();
+            request.open('POST', '?action=drag', true);
+            request.send(formData);
         }
         
         function closeDragElement() {
             document.onmouseup = null;
             document.onmousemove = null;
+
+            
         }
     }
 }

@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-include('pages/SEO.php');
 include('etc/json/bdd.php');
 
 $insertmbr3 = $bdd->prepare('INSERT INTO visits(ip, motor, SCRIPT_NAME, timestamp, date) VALUES(?, ?, ?, UNIX_TIMESTAMP(), ?)');
@@ -16,16 +15,24 @@ if ($banned == 0) {
         switch($_GET['page']) {
             case 'login':
                 if (isset($_SESSION['id'])) {
+                    include('pages/SEO.php');
+
                     include('pages/desktop.php');
                 } else {
+                    include('pages/SEO.php');
+
                     include('pages/login.php');
                 }
             break;
             case 'desktop':
             default:
                 if (isset($_SESSION['id'])) {
+                    include('pages/SEO.php');
+
                     include('pages/desktop.php');
                 } else {
+                    include('pages/SEO.php');
+
                     include('pages/login.php');
                 }
             break;
@@ -35,16 +42,25 @@ if ($banned == 0) {
             case 'disconnect':
                 default:
                 include('boot/actions/disconnect.php');          
-            break;    
+            break;
+            case 'drag':
+                include('boot/actions/drag.php');          
+            break; 
         }
     } else {
         if (isset($_SESSION['id'])) {
+            include('pages/SEO.php');
+
             include('pages/desktop.php');
         } else {
+            include('pages/SEO.php');
+
             include('pages/login.php');
         }
     }
 } else {
     $banned_info = $isbanned->fetch();
+    include('pages/SEO.php');
+
     include('pages/banned.php');
 }

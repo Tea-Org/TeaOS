@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+echo '<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,3 +22,5 @@
     <meta name="twitter:site" content="https://teaos.kellis.fr/" />
     <meta name="twitter:title" content="TeaOS · Free Online Operating System For All" />
     <meta name="twitter:description" content="Free fast and secure OS for everyone, suitable complements to any OS with different Desktop Environments" />
+';
+?>

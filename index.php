@@ -3,8 +3,6 @@ session_start();
 
 include('etc/json/bdd.php');
 
-$insertmbr3 = $bdd->prepare('INSERT INTO visits(ip, motor, SCRIPT_NAME, timestamp, date) VALUES(?, ?, ?, UNIX_TIMESTAMP(), ?)');
-$insertmbr3->execute(array($_SERVER['REMOTE_ADDR'], $_SERVER["HTTP_USER_AGENT"], $_SERVER["SCRIPT_NAME"], date('d-m-Y')));
 
 $isbanned = $bdd->prepare("SELECT * FROM banned_ip WHERE ip = ?");
 $isbanned->execute(array($_SERVER['REMOTE_ADDR']));
@@ -12,6 +10,9 @@ $banned = $isbanned->rowCount();
 
 if ($banned == 0) {
     if (isset($_GET['page'])) {
+        $insertmbr3 = $bdd->prepare('INSERT INTO visits(ip, motor, SCRIPT_NAME, timestamp, date) VALUES(?, ?, ?, UNIX_TIMESTAMP(), ?)');
+        $insertmbr3->execute(array($_SERVER['REMOTE_ADDR'], $_SERVER["HTTP_USER_AGENT"], $_SERVER["SCRIPT_NAME"], date('d-m-Y')));
+
         switch($_GET['page']) {
             case 'login':
                 if (isset($_SESSION['id'])) {
@@ -48,6 +49,9 @@ if ($banned == 0) {
             break; 
         }
     } else {
+        $insertmbr3 = $bdd->prepare('INSERT INTO visits(ip, motor, SCRIPT_NAME, timestamp, date) VALUES(?, ?, ?, UNIX_TIMESTAMP(), ?)');
+        $insertmbr3->execute(array($_SERVER['REMOTE_ADDR'], $_SERVER["HTTP_USER_AGENT"], $_SERVER["SCRIPT_NAME"], date('d-m-Y')));
+
         if (isset($_SESSION['id'])) {
             include('pages/SEO.php');
 
@@ -59,6 +63,9 @@ if ($banned == 0) {
         }
     }
 } else {
+    $insertmbr3 = $bdd->prepare('INSERT INTO visits(ip, motor, SCRIPT_NAME, timestamp, date) VALUES(?, ?, ?, UNIX_TIMESTAMP(), ?)');
+    $insertmbr3->execute(array($_SERVER['REMOTE_ADDR'], $_SERVER["HTTP_USER_AGENT"], $_SERVER["SCRIPT_NAME"], date('d-m-Y')));
+
     $banned_info = $isbanned->fetch();
     include('pages/SEO.php');
 

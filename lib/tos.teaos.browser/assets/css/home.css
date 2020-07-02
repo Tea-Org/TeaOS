@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
 body,html {
     overflow: hidden;
-    color: white
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 .body {
     width: 100%;
@@ -22,6 +25,8 @@ body,html {
     background: #2a2a2e;
     border-radius: 100px;
     margin: 0 15px 10px 15px;
+    border-style: none;
+    border-color: #fff;
     transition: .2s
 }
 .item:hover .square{
@@ -31,7 +36,16 @@ body,html {
     border-color: #38383d;
     border-width: 4px;
 }
+a {
+    color: #fff;
+    text-decoration:none
+}
 .square img {
     width: 100%;
     border-radius: 100px;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }

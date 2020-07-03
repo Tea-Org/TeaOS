@@ -2,7 +2,7 @@
     "code": "tos.teaos.browser",
     "name": "TeaOS Browser",
     "description": "",
-    "version": 1.4,
+    "version": 1.5,
 
     "icon": "lib/tos.teaos.browser/logo.png",
     "url": ""

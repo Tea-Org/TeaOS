@@ -8,10 +8,11 @@ $reqsoftware = $bdd->prepare("SELECT * FROM users WHERE id = ?");
 $reqsoftware->execute(array($_SESSION['id']));
 $userinfo = $reqsoftware->fetch();
 ?>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="etc/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="etc/css/main.css">
 </head>
+
 <body>
     <div class="loading">
         <img src="etc/img/logo_coloured_v2.png" alt="" id="slidecaption">
@@ -29,46 +30,46 @@ $userinfo = $reqsoftware->fetch();
 
     <div class="desktop">
         <div class="icons-desktop">
-            <?php 
-                for($i = 0; $i < $software_count; $i++) {
-                    $appli = json_decode(file_get_contents('bin/'.$software[$i]['code'].'.json'));
-            ?>
-            <div class="icon-desktop" id="<?php echo $software[$i]['id']; ?>" style="height:90px;width:70px;top:<?php echo $software[$i]['toppos']; ?>;left:<?php echo $software[$i]['leftpos']; ?>;">
-                <a href="#">
-                    <img src="<?php print $appli->{'icon'}; ?>">
-                    <span><?php print $appli->{'name'}; ?></span>
-                </a>
-            </div>
             <?php
-                }
+            for ($i = 0; $i < $software_count; $i++) {
+                $appli = json_decode(file_get_contents('bin/' . $software[$i]['code'] . '.json'));
+            ?>
+                <div class="icon-desktop" id="<?php echo $software[$i]['id']; ?>" style="height:90px;width:70px;top:<?php echo $software[$i]['toppos']; ?>;left:<?php echo $software[$i]['leftpos']; ?>;">
+                    <a href="#">
+                        <img src="<?php print $appli->{'icon'}; ?>">
+                        <span><?php print $appli->{'name'}; ?></span>
+                    </a>
+                </div>
+            <?php
+            }
             ?>
         </div>
     </div>
     <?php
-        for($i = 0; $i < $software_count; $i++) {
-            $appli = json_decode(file_get_contents('bin/'.$software[$i]['code'].'.json'));
+    for ($i = 0; $i < $software_count; $i++) {
+        $appli = json_decode(file_get_contents('bin/' . $software[$i]['code'] . '.json'));
     ?>
-    <div class="page" style="display: none">
-        <div class="window">
-            <div class="header">
-                <div class="buttons">
-                    <img src="etc/img/button_minimize.png" class="minimize" alt="">
-                    <img src="etc/img/button_maximize.png" class="maximize" alt="">
-                    <img src="etc/img/button_close.png" class="close" alt="">
+        <div class="page" style="display: none">
+            <div class="window">
+                <div class="header">
+                    <div class="buttons">
+                        <img src="etc/img/button_minimize.png" class="minimize" alt="">
+                        <img src="etc/img/button_maximize.png" class="maximize" alt="">
+                        <img src="etc/img/button_close.png" class="close" alt="">
+                    </div>
+                    <div class="app">
+                        <img src="<?php print $appli->{'icon'}; ?>" alt="">
+                        <p class="app_title"><?php print $appli->{'name'}; ?></p>
+                    </div>
+                    <div class="bar"></div>
                 </div>
-                <div class="app">
-                    <img src="<?php print $appli->{'icon'}; ?>" alt="">
-                    <p class="app_title"><?php print $appli->{'name'}; ?></p>
+                <div class="body">
+                    <iframe id="<?php print $appli->{'code'}; ?>" src=""></iframe>
                 </div>
-                <div class="bar"></div>
-            </div>
-            <div class="body">
-                <iframe id="<?php print $appli->{'code'}; ?>" src=""></iframe>
             </div>
         </div>
-    </div>
     <?php
-        }
+    }
     ?>
     <div class="tiny_box" style="display: none">
         <div class="header">
@@ -88,13 +89,14 @@ $userinfo = $reqsoftware->fetch();
     <script src="etc/js/page.js"></script>
     <script src="etc/js/desktop.js"></script>
     <script>
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             var div = document.getElementsByClassName('loading')[0];
             div.style = "animation: fade .5s linear;"
             setTimeout(() => {
                 div.style.display = "none"
             }, 500);
         })
-</script>
+    </script>
 </body>
+
 </html>

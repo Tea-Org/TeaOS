@@ -1,0 +1,9 @@
+{
+    "code": "tos.teaos.explorer",
+    "name": "TeaOS Explorer",
+    "description": "",
+    "version": 1.0,
+
+    "icon": "lib/tos.teaos.explorer/logo.png",
+    "url": ""
+}

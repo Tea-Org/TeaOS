@@ -17,6 +17,10 @@ include('recreate.php');
 
             mkdir("../../../home/".$unik);
             recreate($unik);
+            $reqmail = $bdd->prepare("SELECT * FROM users WHERE username = ?");
+            $reqmail->execute(array($username));
+            $mailexiste = $reqmail->fetch();
+            softwares($mailexiste['id'], $bdd);
 
             echo 'ok';
             header('Location: ../?page=user_list');

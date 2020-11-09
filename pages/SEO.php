@@ -25,5 +25,6 @@ echo '<!DOCTYPE html>
     <meta name="twitter:site" content="https://teaos.software/" />
     <meta name="twitter:title" content="TeaOS · Free Online Operating System For All" />
     <meta name="twitter:description" content="Free fast and secure OS for everyone, suitable complements to any OS with different Desktop Environments" />
-';
+    <script data-ad-client="ca-pub-6117430677947305" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    ';
 ?>

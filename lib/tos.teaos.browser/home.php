@@ -27,7 +27,7 @@ $softwarecount = $reqsoftware->rowCount();
         ?>
         <a href="<?php echo $softwared['url']; ?>">
             <div class="item">
-                <div class="square"><img src="https://api.faviconkit.com/<?php echo $softwared['url']; ?>/1024" alt=""></div>
+                <div class="square"><img src="https://api.faviconkit.com/<?php echo substr($softwared['url'], 7);; ?>/1024" alt=""></div>
                 <p><?php echo $softwared['url']; ?></p>
             </div>
         </a>

@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Client :  localhost:3306
--- Généré le :  Ven 18 Septembre 2020 à 20:01
--- Version du serveur :  10.3.23-MariaDB-0+deb10u1
--- Version de PHP :  7.3.19-1~deb10u1
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  lun. 09 nov. 2020 à 18:07
+-- Version du serveur :  5.7.24
+-- Version de PHP :  7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -26,12 +28,14 @@ SET time_zone = "+00:00";
 -- Structure de la table `banned_ip`
 --
 
-CREATE TABLE `banned_ip` (
-  `id` int(255) NOT NULL,
+DROP TABLE IF EXISTS `banned_ip`;
+CREATE TABLE IF NOT EXISTS `banned_ip` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `ip` varchar(100) NOT NULL,
   `date` int(15) NOT NULL,
   `date_finish` int(15) NOT NULL,
-  `reason` varchar(1000) NOT NULL
+  `reason` varchar(1000) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -40,11 +44,13 @@ CREATE TABLE `banned_ip` (
 -- Structure de la table `browser_visits`
 --
 
-CREATE TABLE `browser_visits` (
-  `id` int(255) NOT NULL,
+DROP TABLE IF EXISTS `browser_visits`;
+CREATE TABLE IF NOT EXISTS `browser_visits` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `website_id` int(255) NOT NULL,
   `user_id` int(255) NOT NULL,
-  `date` int(15) NOT NULL
+  `date` int(15) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -53,11 +59,13 @@ CREATE TABLE `browser_visits` (
 -- Structure de la table `browser_websites`
 --
 
-CREATE TABLE `browser_websites` (
-  `id` int(255) NOT NULL,
+DROP TABLE IF EXISTS `browser_websites`;
+CREATE TABLE IF NOT EXISTS `browser_websites` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) NOT NULL,
   `url` varchar(2000) NOT NULL,
-  `date` int(15) NOT NULL
+  `date` int(15) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -66,8 +74,9 @@ CREATE TABLE `browser_websites` (
 -- Structure de la table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(255) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(32) NOT NULL,
   `ip_reg` varchar(100) NOT NULL,
@@ -80,7 +89,8 @@ CREATE TABLE `users` (
   `screen` varchar(255) NOT NULL,
   `perm` int(1) NOT NULL,
   `unik` varchar(255) NOT NULL,
-  `reg_by_admin` int(1) NOT NULL
+  `reg_by_admin` int(1) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -89,11 +99,15 @@ CREATE TABLE `users` (
 -- Structure de la table `users_softwares`
 --
 
-CREATE TABLE `users_softwares` (
-  `id` int(255) NOT NULL,
+DROP TABLE IF EXISTS `users_softwares`;
+CREATE TABLE IF NOT EXISTS `users_softwares` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `code` varchar(255) NOT NULL,
   `user_id` int(255) NOT NULL,
-  `date` int(15) NOT NULL
+  `date` int(15) NOT NULL,
+  `toppos` varchar(7) NOT NULL,
+  `leftpos` varchar(7) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -102,89 +116,18 @@ CREATE TABLE `users_softwares` (
 -- Structure de la table `visits`
 --
 
-CREATE TABLE `visits` (
-  `id` int(255) NOT NULL,
+DROP TABLE IF EXISTS `visits`;
+CREATE TABLE IF NOT EXISTS `visits` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `ip` varchar(255) NOT NULL,
   `motor` varchar(1000) NOT NULL,
   `SCRIPT_NAME` varchar(1000) NOT NULL,
   `timestamp` int(20) NOT NULL,
-  `date` varchar(255) NOT NULL
+  `date` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+COMMIT;
 
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `banned_ip`
---
-ALTER TABLE `banned_ip`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `browser_visits`
---
-ALTER TABLE `browser_visits`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `browser_websites`
---
-ALTER TABLE `browser_websites`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `users_softwares`
---
-ALTER TABLE `users_softwares`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `visits`
---
-ALTER TABLE `visits`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `banned_ip`
---
-ALTER TABLE `banned_ip`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT pour la table `browser_visits`
---
-ALTER TABLE `browser_visits`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT pour la table `browser_websites`
---
-ALTER TABLE `browser_websites`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT pour la table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT pour la table `users_softwares`
---
-ALTER TABLE `users_softwares`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT pour la table `visits`
---
-ALTER TABLE `visits`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

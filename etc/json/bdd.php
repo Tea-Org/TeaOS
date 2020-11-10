@@ -5,7 +5,7 @@ $general = array(
     "port"=>3306,
     "db"=>"teaos",
     "user"=>"root",
-    "password"=>""
+    "password"=>"toor"
 );
 
 $bdd = new PDO('mysql:host='.$general['host'].';dbname='.$general['db'], $general['user'], $general['password']);

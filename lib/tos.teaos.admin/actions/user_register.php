@@ -12,7 +12,7 @@ include('recreate.php');
         if($mailexist == 0) {
             $unik = uniqid();
 
-            $insertmbr = $bdd->prepare("INSERT INTO users(username, password, ip_reg, ip, navigateur, date_reg, date, json_reg, json, perm, screen, unik, reg_by_admin) VALUES(?, ?, 0, 0, 0, UNIX_TIMESTAMP(), 0, 0, 0, 0, ?, ?, 1)");
+            $insertmbr = $bdd->prepare("INSERT INTO users(username, password, ip_reg, ip, navigateur, date_reg, date, json_reg, json, perm, screen, unik, reg_by_admin) VALUES(?, ?, 0, 0, 0, UNIX_TIMESTAMP(), 0, 0, 0, ?, 0, ?, 1)");
             $insertmbr->execute(array($username, $password, intval($_POST['perm']), $unik));
 
             mkdir("../../../home/".$unik);

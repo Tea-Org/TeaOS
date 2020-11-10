@@ -1,5 +1,5 @@
 <?php
-
+include('../../../etc/json/bdd.php');
 
 function recreate($e) {
     if (!file_exists("../../../home/".$e."/Documents/")) {

@@ -15,7 +15,7 @@ function recreate($e) {
     }
 }
 function softwares($e, $bdd) {
-    $r = array('tos.teaos.console',' tos.teaos.browser', 'tos.teaos.admin', 'tos.teaos.store', 'tos.teaos.explorer');
+    $r = array('tos.teaos.console','tos.teaos.browser', 'tos.teaos.admin', 'tos.teaos.store', 'tos.teaos.explorer');
     foreach ($r as &$value) {
         $insertmbr = $bdd->prepare("INSERT INTO users_softwares(code, user_id, date, toppos, leftpos) VALUES(?, ?, UNIX_TIMESTAMP(), 0, 0)");
         $insertmbr->execute(array($value, $e));

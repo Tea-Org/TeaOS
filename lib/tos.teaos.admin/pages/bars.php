@@ -36,7 +36,7 @@ if (isset($_SESSION['id'])) {
 
 	</nav>
 	<aside class="navbar-indigo elevation-4 main-sidebar sidebar-dark-primary">
-		<a class="navbar-indigo brand-link" href=""><img class="brand-image elevation-3 img-circle"src=../../etc/img/logo.png style=opacity:.8> <span class="brand-text font-weight-light">TeaOS | Admin Panel</span></a>
+		<a class="navbar-indigo brand-link" href=""><img class="brand-image elevation-3 img-circle"src=../../etc/img/logo.svg style=opacity:.8> <span class="brand-text font-weight-light">TeaOS | Admin Panel</span></a>
 		<div class=sidebar>
 			<div class="d-flex mb-3 mt-3 pb-3 user-panel">
 				<div class=info><a class=d-block href=#><?php $userinfo['username']; ?></a></div>

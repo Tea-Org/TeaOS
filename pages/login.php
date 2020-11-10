@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="footer">
-        <img src="etc/img/logo.png">
+        <img src="etc/img/logo.svg">
         <p>TeaOS <?php echo (file_get_contents('version')) ?></p>
     </div>
 

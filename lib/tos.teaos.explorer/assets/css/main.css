@@ -1,3 +1,40 @@
-html, body {
-    background-color: #2a2a2e
+@font-face {
+    src: url('../../../../etc/font/CONTAX\ W01\ 25\ ULTRA\ LIGHT.TTF');
+    font-family: contax
 }
+html, body {
+    background-color: #2a2a2e;
+    width: 100%;
+    height: 100%;
+    font-family: contax;
+}
+.page {
+    position: relative;
+    top: 0
+}
+.file {
+    width: 75px;
+    float: left;
+    word-wrap: break-word;
+    hyphens: auto;
+    color: #D5D5D1;
+    position: relative;
+    margin: 10px;
+    top: 0;
+    padding: 4px 8px;
+    border: 2px solid transparent;
+}
+.file p {
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin-top: 3px;
+    text-align: center;
+}
+.file:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  a {
+      text-decoration: none;
+  }

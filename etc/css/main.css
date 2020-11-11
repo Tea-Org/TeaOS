@@ -43,11 +43,6 @@ html, body {
     position: absolute;
   }
   
-  .desktop .icon-desktop a {
-    display: block;
-    text-decoration: none;
-    cursor: default;
-  }
   
   .desktop .icon-desktop img {
     height: 48px;

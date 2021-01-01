@@ -61,6 +61,19 @@ if (isset($_SESSION['id'])) {
 							<p>Userlist</p>
 						</a>
 					</li>
+					<li class=nav-item>
+						<a class="nav-link"href="?page=ban_hammer">
+							<i class="fas fa-hammer nav-icon"></i>
+							<p>Ban Hammer</p>
+						</a>
+					</li>
+					<li class=nav-item>
+						<a class="nav-link"href="?page=ban_list">
+							<i class="fas fa-list nav-icon"></i>
+							<p>Banlist</p>
+						</a>
+					</li>
+					
 				</ul>
 			</nav>
 		</div>

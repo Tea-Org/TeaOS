@@ -14,8 +14,7 @@ if (isset($_SESSION['id'])) {
 <meta content="width=device-width,initial-scale=1"name=viewport>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css rel=stylesheet>
 <link href=https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css rel=stylesheet>
-<link href=https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css rel=stylesheet>
-<link href=https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css rel=stylesheet>
+<link href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css rel=stylesheet>
 
 <link href=assets/css/adminlte.min.css rel=stylesheet>
 <link href=assets/css/main.css rel=stylesheet>

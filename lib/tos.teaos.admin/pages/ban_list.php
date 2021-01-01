@@ -28,11 +28,18 @@ if (isset($_GET['page'])) {
                     <div class=container-fluid>
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">TeaOS Banned</h3>
+                                <h3 class="card-title">TeaOS Banned Users</h3>
                             </div>
-                            <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped">
+                                <div class="row but">
+                                    <div class="col-6 gr">
+                                        <p>Grid</p>
+                                    </div>
+                                    <div class="col-6 gr">
+                                        <p>Columns</p>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered table-striped dr">
                                     <thead>
                                         <tr>
                                             <th>IP</th>
@@ -73,12 +80,36 @@ if (isset($_GET['page'])) {
                                         </tr>
                                     </tfoot>
                                 </table>
+                            
+                            <?php
+                            for ($i = 0; $i < $usercount; $i++) {
+                                $reqabcdef = $bdd->prepare("SELECT * FROM users WHERE id = ?");
+                                            $reqabcdef->execute(array($users[$i]['operator_id']));
+                                            $userinfoef = $reqabcdef->fetch();
+                            ?>
+
+                                <div class="row dr" style="display: none">
+                                    <div class="col-md">
+                                        <div class="row">
+                                            <div class="col-12 user_infos">
+                                                <p><b>IP:</b> <?php echo $users[$i]['ip']; ?></p>
+                                                <p><b>Date:</b> <?php echo date('d/m/Y H:i:s', $users[$i]['date']); ?></p>
+                                                <p><b>Until:</b> <?php echo date('d/m/Y H:i:s', $users[$i]['date_finish']); ?></p>
+                                                <p><b>Reason:</b> <?php echo $users[$i]['reason']; ?></p>
+                                                <p><b>By:</b> <?php echo $userinfoef['username']; ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            <?php } ?>
                             </div>
-                            <!-- /.card-body -->
                         </div>
                     </div>
                 </section>
             </div>
+            <script src="assets/js/grid.js"></script>
+
 <?php
         } else {
             echo 'You\'re not allowed to display this page';

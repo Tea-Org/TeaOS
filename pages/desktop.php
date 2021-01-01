@@ -62,7 +62,7 @@ $userinfo = $reqsoftware->fetch();
                     <div class="bar"></div>
                 </div>
                 <div class="body">
-                    <iframe id="<?php print $appli->{'code'}; ?>" src=""></iframe>
+                    <iframe id="<?php print $appli->{'code'}; ?>" src="<?php print $appli->{'url'}; ?>"></iframe>
                 </div>
             </div>
         </div>

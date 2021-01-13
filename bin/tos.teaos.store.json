@@ -4,6 +4,6 @@
     "description": "",
     "version": 1.0,
 
-    "icon": "lib/tos.teaos.store/logo.png",
-    "url": ""
+    "icon": "lib/tos.teaos.store/logo.svg",
+    "url": "lib/tos.teaos.store/"
 }

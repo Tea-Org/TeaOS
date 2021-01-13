@@ -35,10 +35,8 @@ $userinfo = $reqsoftware->fetch();
                 $appli = json_decode(file_get_contents('bin/' . $software[$i]['code'] . '.json'));
             ?>
                 <div class="icon-desktop" id="<?php echo $software[$i]['id']; ?>" style="height:90px;width:70px;top:<?php echo $software[$i]['toppos']; ?>;left:<?php echo $software[$i]['leftpos']; ?>;">
-                    <a href="#">
-                        <img src="<?php print $appli->{'icon'}; ?>">
-                        <span><?php print $appli->{'name'}; ?></span>
-                    </a>
+                    <img src="<?php print $appli->{'icon'}; ?>">
+                    <span><?php print $appli->{'name'}; ?></span>
                 </div>
             <?php
             }
@@ -64,7 +62,7 @@ $userinfo = $reqsoftware->fetch();
                     <div class="bar"></div>
                 </div>
                 <div class="body">
-                    <iframe id="<?php print $appli->{'code'}; ?>" src=""></iframe>
+                    <iframe id="<?php print $appli->{'code'}; ?>" src="<?php print $appli->{'url'}; ?>"></iframe>
                 </div>
             </div>
         </div>

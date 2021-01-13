@@ -18,7 +18,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	for (let i = 0; i < icons.length; i++) {
 		icons[i].addEventListener("dblclick", () => {
-			iframe[i].src = 'lib/'+iframe[i].id;
 			page[i].style.display = 'block';
 		});
 

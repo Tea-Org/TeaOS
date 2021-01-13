@@ -37,17 +37,12 @@ html, body {
     position: absolute
 }
 .desktop .icon-desktop {
-    padding: 4px 8px 4px 8px;
+    padding: 4px 8px;
     border: 2px solid transparent;
     text-align: center;
     position: absolute;
   }
   
-  .desktop .icon-desktop a {
-    display: block;
-    text-decoration: none;
-    cursor: default;
-  }
   
   .desktop .icon-desktop img {
     height: 48px;

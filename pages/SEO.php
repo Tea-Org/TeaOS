@@ -4,7 +4,7 @@ echo '<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="etc/img/logo.png" />
+    <link rel="icon" href="etc/img/logo.svg" />
     <title>TeaOS · FREE ONLINE OPERATING SYSTEM FOR ALL</title>
     <meta name="theme-color" content="#6b0069">
     <meta name="description" content="TeaOS · Free Online Operating System For All">

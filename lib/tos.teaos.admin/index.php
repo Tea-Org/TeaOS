@@ -8,20 +8,26 @@ if (isset($_SESSION['id'])) {
     $reqabcd->execute(array($_SESSION['id']));
     $userinfo = $reqabcd->fetch();
 
-    if ($userinfo['perm'] == 1) { 
+    if ($userinfo['perm'] == 1) {
         include('pages/bars.php');
         if (isset($_GET['page'])) {
             switch ($_GET['page']) {
                 case 'index':
-                    default:
+                default:
                     include('pages/index.php');
                     break;
-                    case 'register':
-                        include('pages/register.php');
-                        break;
-                        case 'user_list':
-                            include('pages/user_list.php');
-                            break;
+                case 'register':
+                    include('pages/register.php');
+                    break;
+                case 'user_list':
+                    include('pages/user_list.php');
+                    break;
+                case 'ban_hammer':
+                    include('pages/ban_hammer.php');
+                    break;
+                case 'ban_list':
+                    include('pages/ban_list.php');
+                    break;
             }
         } else {
             include('pages/index.php');

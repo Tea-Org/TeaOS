@@ -14,8 +14,7 @@ if (isset($_SESSION['id'])) {
 <meta content="width=device-width,initial-scale=1"name=viewport>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css rel=stylesheet>
 <link href=https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css rel=stylesheet>
-<link href=https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css rel=stylesheet>
-<link href=https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css rel=stylesheet>
+<link href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css rel=stylesheet>
 
 <link href=assets/css/adminlte.min.css rel=stylesheet>
 <link href=assets/css/main.css rel=stylesheet>
@@ -36,7 +35,7 @@ if (isset($_SESSION['id'])) {
 
 	</nav>
 	<aside class="navbar-indigo elevation-4 main-sidebar sidebar-dark-primary">
-		<a class="navbar-indigo brand-link" href=""><img class="brand-image elevation-3 img-circle"src=../../etc/img/logo.png style=opacity:.8> <span class="brand-text font-weight-light">TeaOS | Admin Panel</span></a>
+		<a class="navbar-indigo brand-link" href=""><img class="brand-image elevation-3 img-circle"src=../../etc/img/logo.svg style=opacity:.8> <span class="brand-text font-weight-light">TeaOS | Admin Panel</span></a>
 		<div class=sidebar>
 			<div class="d-flex mb-3 mt-3 pb-3 user-panel">
 				<div class=info><a class=d-block href=#><?php $userinfo['username']; ?></a></div>
@@ -61,6 +60,19 @@ if (isset($_SESSION['id'])) {
 							<p>Userlist</p>
 						</a>
 					</li>
+					<li class=nav-item>
+						<a class="nav-link"href="?page=ban_hammer">
+							<i class="fas fa-hammer nav-icon"></i>
+							<p>Ban Hammer</p>
+						</a>
+					</li>
+					<li class=nav-item>
+						<a class="nav-link"href="?page=ban_list">
+							<i class="fas fa-list nav-icon"></i>
+							<p>Banlist</p>
+						</a>
+					</li>
+					
 				</ul>
 			</nav>
 		</div>

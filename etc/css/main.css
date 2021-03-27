@@ -2,6 +2,7 @@
     src: url('../font/CONTAX\ W01\ 25\ ULTRA\ LIGHT.TTF');
     font-family: contax
 }
+
 @-webkit-keyframes Gradient {
     0% {
         background-position: 0% 50%;
@@ -13,6 +14,7 @@
         background-position: 0% 50%;
     }
 }
+
 @-webkit-keyframes pro {
     0% {
         width: 90%;
@@ -26,52 +28,54 @@ html, body {
     color: #e6e0d4;
     font-family: contax;
     overflow: hidden;
-    background: url(../../usr/share/backgrounds/default.jpg) no-repeat center fixed; 
+    background: url(../../usr/share/backgrounds/default.jpg) no-repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover;
 
 }
+
 .desktop {
     width: 100%;
     height: 100%;
     position: absolute
 }
+
 .desktop .icon-desktop {
     padding: 4px 8px;
     border: 2px solid transparent;
     text-align: center;
     position: absolute;
-  }
-  
-  
-  .desktop .icon-desktop img {
+}
+
+
+.desktop .icon-desktop img {
     height: 48px;
     width: 48px;
-  }
-  
-  .desktop .icon-desktop span {
+}
+
+.desktop .icon-desktop span {
     display: block;
     color: white;
     font-size: 18px;
     margin-top: 3px;
     text-align: center;
-  }
-  
-  .desktop .icon-desktop:hover {
+}
+
+.desktop .icon-desktop:hover {
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  
-  
+}
+
+
 .toolbar {
-    width:100%;
+    width: 100%;
     height: 35px;
     background-color: #2a2b2eaa;
     z-index: 5;
     position: relative;
     top: 0;
 }
+
 .window {
     width: 780px;
     height: 650px;
@@ -85,6 +89,7 @@ html, body {
     resize: vertical;
 
 }
+
 .header {
     position: relative;
     top: 0;
@@ -92,35 +97,47 @@ html, body {
     height: 30px;
     border-radius: 20px 20px 0 0;
 }
+
 .bar {
-    background:-moz-linear-gradient(0deg,#202124 0,#2a2b2e 100%);
+    background: -moz-linear-gradient(0deg, #202124 0, #2a2b2e 100%);
+    background: -webkit-linear-gradient(0deg, #202124 0, #2a2b2e 100%);
+    background: linear-gradient(0deg, #202124 0, #2a2b2e 100%);
     width: 100%;
     height: 100%;
     border-radius: 20px 20px 0 0;
 }
+
 .buttons {
     position: absolute;
 
     display: flex;
     align-items: center;
-    top: 0; bottom: 0; right: 5px;
+    top: 0;
+    bottom: 0;
+    right: 5px;
 }
+
 .buttons img, .app img {
     padding: 0 4px 0 4px;
     width: 14px
 }
+
 .app {
     position: absolute;
 
     display: flex;
     align-items: center;
-    top: 0; bottom: 0;left: 5px;
+    top: 0;
+    bottom: 0;
+    left: 5px;
 }
+
 .app p {
     font-size: 20px;
     padding-left: 4px;
     font-weight: bold
 }
+
 .body {
     background-color: #202124;
     width: 100%;
@@ -128,6 +145,7 @@ html, body {
 
     opacity: 0.9
 }
+
 iframe {
     width: 100%;
     height: 100%
@@ -142,32 +160,38 @@ iframe {
 
 .right {
     position: absolute;
-    
+
     display: flex;
     align-items: center;
-    top: 0; bottom: 0; right: 20px;
+    top: 0;
+    bottom: 0;
+    right: 20px;
 }
+
 .right .hour {
     font-size: 18px;
     padding-right: 15px
 }
+
 .right .logout {
     transform: rotate(90deg);
     cursor: default
 }
-.right .internet,.right .battery {
+
+.right .internet, .right .battery {
     padding-right: 10px;
     cursor: default
 }
 
 @keyframes fadeDown {
-	0% {
-		opacity: 1
-	}
-	100% {
-		opacity: 0
-	}
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
 }
+
 .right p:hover {
     color: rgb(189, 189, 189);
 }
@@ -182,31 +206,38 @@ iframe {
     border-width: 1px;
     border-color: #2e2e2e;
 }
+
 .task_box .task {
     padding: 10px;
     position: relative
 }
+
 .task_box .task p {
     text-align: center;
     padding: 10px
 }
+
 .task_box .battery {
     float: left;
     font-weight: bold;
     font-size: 48px;
 }
+
 .task_box .font {
     font-weight: bold;
     font-size: 48px;
 }
+
 .box, .task {
     width: 100%;
     height: 100%;
     position: relative
 }
+
 .ethernet {
     color: #000
 }
+
 .taskb {
     cursor: default
 }
@@ -220,65 +251,76 @@ iframe {
 
     border-radius: 20px;
 
-    
+
     resize: vertical;
     display: block;
     left: 0;
     right: 0;
-    top:0;
-    bottom:0;
+    top: 0;
+    bottom: 0;
 
     text-align: center;
 }
 
-.tiny_box .battery{
+.tiny_box .battery {
     font-size: 48px;
 }
-.tiny_box .font{
+
+.tiny_box .font {
     font-size: 48px;
 }
-.tiny_box .sec_font{
+
+.tiny_box .sec_font {
     font-size: 36px;
 }
+
 .ethernet {
     position: absolute;
     width: 100%;
     height: 100%;
 }
+
 .ethernet p {
     text-align: center;
-vertical-align: middle;
-line-height: 150px;
-font-size: 32px
+    vertical-align: middle;
+    line-height: 150px;
+    font-size: 32px
 }
-.time{
+
+.time {
     text-align: center;
     vertical-align: middle;
     line-height: 150px;
     font-size: 48px
-    
+
 }
+
 .eteindre {
     padding: 10px;
     font-size: 18px
 }
+
 .message {
     font-size: 14px;
     padding-bottom: 10px;
 }
+
 .other {
     font-size: 14px;
     padding-top: 10px;
 }
+
 .pro_bar {
     width: 0%;
     height: 10px;
     border-radius: 3px;
-    
+
     animation: Gradient 10s ease infinite, pro 15s linear;
     -moz-animation: Gradient 10s ease infinite, pro 15s linear;
     -webkit-animation: Gradient 10s ease infinite, pro 15s linear;
-    background: linear-gradient(40deg, rgb(14, 0, 214) ,rgb(50, 132, 255));
+    background: -moz-linear-gradient(40deg, rgb(14, 0, 214), rgb(50, 132, 255));
+    background: -webkit-linear-gradient(40deg, rgb(14, 0, 214), rgb(50, 132, 255));
+    background: linear-gradient(40deg, rgb(14, 0, 214), rgb(50, 132, 255));
     background-size: 400% 400%;
 
 
@@ -287,12 +329,13 @@ font-size: 32px
     margin: auto;
     margin-top: 5px;
 
-    
+
     resize: vertical;
     display: block;
     left: 0;
     right: 0;
 }
+
 .dis_but {
     bottom: 0;
     position: absolute;
@@ -304,9 +347,11 @@ font-size: 32px
     cursor: pointer;
     font-size: 22px
 }
+
 .dis_but:hover {
     background-color: #e6e0d423;
 }
+
 .loading {
     position: absolute;
     width: 100%;
@@ -314,65 +359,65 @@ font-size: 32px
     background: #1b1b1b;
     z-index: 100
 }
-#slidecaption {
-    -webkit-animation-name: spinner; 
-   -webkit-animation-timing-function: linear; 
-   -webkit-animation-iteration-count: infinite; 
-   -webkit-animation-duration: 3s; 
-   animation-name: spinner; 
-   animation-timing-function: linear; 
-   animation-iteration-count: infinite; 
-   animation-duration: 3s; 
-   -webkit-transform-style: preserve-3d; 
-   -moz-transform-style: preserve-3d; 
-   -ms-transform-style: preserve-3d; 
-   transform-style: preserve-3d;
 
-   position: absolute;
+#slidecaption {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    position: absolute;
     width: 100px;
-    
+
     display: flex;
     left: 0;
     right: 0;
-    top:0;
-    bottom:0;
-    margin:auto;
- }
- 
- 
- /* WebKit and Opera browsers */ 
- @-webkit-keyframes spinner { 
-   from 
-   { 
-     -webkit-transform: rotateY(0deg); 
-   } 
-   to { 
-     -webkit-transform: rotateY(-360deg); 
-   } 
- } 
- /* all other browsers */ 
- @keyframes spinner { 
-    from { 
-     -moz-transform: rotateY(0deg); 
-     -ms-transform: rotateY(0deg); 
-     transform: rotateY(0deg); 
-    } 
-    to 
-    { 
-     -moz-transform: rotateY(-360deg); 
-     -ms-transform: rotateY(-360deg); 
-     transform: rotateY(-360deg); 
- 
-    } 
- }
- @keyframes fade { 
-    from { 
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+/* WebKit and Opera browsers */
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+
+/* all other browsers */
+@keyframes spinner {
+    from {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    to {
+        -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+
+    }
+}
+
+@keyframes fade {
+    from {
         opacity: 1
-    } 
-    to 
-    { 
-        opacity: 0 ;
+    }
+    to {
+        opacity: 0;
         display: none
-    } 
- }
+    }
+}
  

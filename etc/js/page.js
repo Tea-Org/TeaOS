@@ -50,8 +50,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
 				j = 1;
 			} else {
-				window[i].style.width = '780px';
-				window[i].style.height = '650px';
+				window[i].style.width = '40%';
+				window[i].style.height = '70%';
 
 				j = 0;
 			}
@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			} else {
 				body[i].style.display = 'block';
 
-				window[i].style.width = '780px';
+				window[i].style.width = '40%';
 				app_title[i].style.display = 'block';
 
 				k = 0

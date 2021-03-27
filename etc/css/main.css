@@ -77,8 +77,8 @@ html, body {
 }
 
 .window {
-    width: 780px;
-    height: 650px;
+    width: 40%;
+    height: 70%;
     position: absolute;
 
     margin: auto;
@@ -119,7 +119,8 @@ html, body {
 
 .buttons img, .app img {
     padding: 0 4px 0 4px;
-    width: 14px
+    width: 14px;
+    z-index: 1
 }
 
 .app {
@@ -130,12 +131,26 @@ html, body {
     top: 0;
     bottom: 0;
     left: 5px;
+
+    width: calc(100% - 66px);
 }
 
 .app p {
     font-size: 20px;
     padding-left: 4px;
-    font-weight: bold
+    font-weight: bold;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    z-index: 0
+}
+
+@media screen and (max-width: 500px) {
+    .app p {
+        display:none
+    }
 }
 
 .body {

@@ -2,163 +2,161 @@
     src: url('../font/CONTAX\ W01\ 25\ ULTRA\ LIGHT.TTF');
     font-family: contax
 }
+
 @font-face {
     src: url('../font/FRUTIGER\ NEXT\ HEAVY\ ITALIC.TTF');
     font-family: frutiger
 }
+
 html, body {
     color: #e6e0d4;
-    font-family: contax;
+    font-family: contax, monospace;
     overflow: hidden;
-    background: url(../../usr/share/backgrounds/default.jpg) no-repeat center fixed; 
+    background: url(../../usr/share/backgrounds/default.jpg) repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover;
-}
-.background_mobile {
-    background: #2a2a2e;
-    position: absolute;
-    width: 100%;
     height: 100%;
-}
-.background_mobile img {
-    position: absolute;
-    width: 150px;
-    
-    display: flex;
-    left: 0;
-    right: 0;
-    top:0;
-    bottom:0;
-    margin:auto;
-}
-.left {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    position: absolute;
-    top: 0; bottom: 0; left: 150px;
-}
-.block {
-    display: block;
-}
-p.hour {
-    font-size: 220px;
-}
-p.date {
-    font-size: 64px;
+    width: 100%
 }
 
+p.hour {
+    font-size: 120px;
+    text-align: center;
+}
 
 .center {
-    margin: auto;
-    left: 0; right: 0;
-}
-.right {
+    z-index: 1;
     display: flex;
     align-items: center;
-    text-align: left;
-    position: absolute;
-    top: 0; bottom: 0; right: 300px;
-}
-.input {
-    width: 400px;
-    height: 80px;
-    border-radius: 10px;
-    mix-blend-mode: soft-light;
-    margin-bottom: 40px;
-    position: relative
-}
-.button {
-    width: 400px;
-    height: 80px;
-    border-radius: 10px;
-    margin-top: 40px;
-}
-.button button {
-    background: #a400ae;
+    justify-content: center;
     text-align: center;
-    color: white;
-    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.form * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.form {
     width: 100%;
     height: 100%;
-    font-size: 32px;
-    font-family: contax;
-    margin: 0 20px 0 20px;
-    border-style: none;
-    border-radius: 10px;
-    box-shadow: #a400ae 0 0 24px;
+    z-index: 1;
 }
+
 input {
     width: 100%;
-    height: 100%;
-    font-size: 32px;
-    font-family: contax;
-    padding: 0 20px 0 20px;
-    border-style: none;
-    border-radius: 10px;
-    box-shadow: #fff 0 0 24px;
+    height: 40px;
+
+    background: #0D0E1077;
+    border: /*#21262d*/#b9b9b9 solid 1px;
+    color: #e5e5e5;
+    padding: 5px;
+    margin: 15px 0;
+    border-radius: 5px
 }
+
+input:focus {
+    border: #420041 solid 1px;
+    color: #fff
+}
+
+button {
+    background: #0D0E10;
+    color: #e5e5e5;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    width: 100%;
+    transition: .1s
+}
+
 button:hover {
-    transition: .5s;
-    cursor: pointer;
-    background: #fff;
-    color: #000;
-    box-shadow: #fff 0 0 24px;
-    mix-blend-mode: soft-light;
+    color: #0D0E10;
+    background: #e5e5e5;
+}
+
+button:active {
+    background: #bfbfbf;
 }
 
 .footer {
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 100px; left: 100px;
+    bottom: 50px;
+    left: 5%;
     mix-blend-mode: soft-light;
     text-shadow: #a400ae 0 0 24px;
 }
+
 .footer img {
     width: 64px;
 }
+
 .footer p {
-    font-family: frutiger;
-    font-size:32px;
+    font-family: frutiger, monospace;
+    font-size: 32px;
     padding-left: 32px;
     font-stretch: 130%;
     letter-spacing: 10px;
 }
-@-webkit-keyframes spinner { 
-    from 
-    { 
-      -webkit-transform: rotateY(0deg); 
-    } 
-    to { 
-      -webkit-transform: rotateY(-360deg); 
-    } 
-  } 
-  /* all other browsers */ 
-  @keyframes spinner { 
-     from { 
-      -moz-transform: rotateY(0deg); 
-      -ms-transform: rotateY(0deg); 
-      transform: rotateY(0deg); 
-     } 
-     to 
-     { 
-      -moz-transform: rotateY(-360deg); 
-      -ms-transform: rotateY(-360deg); 
-      transform: rotateY(-360deg); 
-  
-     } 
-  }
-  @keyframes fade { 
-    from { 
+
+@media screen and (max-width: 667px) {
+    .footer img {
+        width: 46px;
+    }
+
+    .footer p {
+        font-size: 16px;
+        padding-left: 32px;
+    }
+}
+
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+
+/* all other browsers */
+@keyframes spinner {
+    from {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    to {
+        -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+
+    }
+}
+
+@keyframes fade {
+    from {
         opacity: 1
-    } 
-    to 
-    { 
-        opacity: 0 ;
+    }
+    to {
+        opacity: 0;
         display: none
-    } 
- }
+    }
+}
+
 .loading {
     position: absolute;
     width: 100%;
@@ -166,27 +164,28 @@ button:hover {
     background: #1b1b1b;
     z-index: 100
 }
-#slidecaption {
-    -webkit-animation-name: spinner; 
-   -webkit-animation-timing-function: linear; 
-   -webkit-animation-iteration-count: infinite; 
-   -webkit-animation-duration: 3s; 
-   animation-name: spinner; 
-   animation-timing-function: linear; 
-   animation-iteration-count: infinite; 
-   animation-duration: 3s; 
-   -webkit-transform-style: preserve-3d; 
-   -moz-transform-style: preserve-3d; 
-   -ms-transform-style: preserve-3d; 
-   transform-style: preserve-3d;
 
-   position: absolute;
+#slidecaption {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    position: absolute;
     width: 100px;
-    
+
     display: flex;
     left: 0;
     right: 0;
-    top:0;
-    bottom:0;
-    margin:auto;
- }
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}

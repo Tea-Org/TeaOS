@@ -3,4 +3,4 @@
     Deny from all
 </Files>
 
-Options -Indexes
+Options -IndexesOptions -Indexes

@@ -12,24 +12,20 @@ window.addEventListener("DOMContentLoaded", () => {
         var request = new XMLHttpRequest();
         request.open('POST', 'boot/actions/login.php', true);
         request.send(formData);
-        request.onreadystatechange = function()
-        {
+        request.onreadystatechange = function () {
             if (request.readyState === 4) {
                 const resp = request.responseText.split("|");
-                if (resp[0] == "ok") {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Welcome',
-                        text: 'Nice to see you again ' + resp[1] + ' !',
-                        showConfirmButton: false,
-                        timer: 1500
-                    }).then ((result) => {window.location.assign("?page=desktop")})
+                if (resp[0] === "ok") {
+                    for (let i = 0; i < input.length; i++) {
+                        input[i].style.borderColor = 'green'
+                        input[i].style.color = 'green'
+                    }
+                    window.location.assign("?page=desktop")
                 } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: request.responseText
-                    }).then ((result) => {input[1].value = ""})
+                    for (let i = 0; i < input.length; i++) {
+                        input[i].style.borderColor = 'red'
+                        input[i].style.color = 'red'
+                    }
                 }
             }
         }

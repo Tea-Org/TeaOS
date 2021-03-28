@@ -68,10 +68,6 @@ html, body {
     text-overflow: ellipsis;
 }
 
-.desktop .icon-desktop:active span {
-    white-space: normal;
-}
-
 .desktop .icon-desktop:hover {
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);

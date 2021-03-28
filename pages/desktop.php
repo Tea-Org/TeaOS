@@ -89,7 +89,7 @@ $userinfo = $reqsoftware->fetch();
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="etc/js/toolbar.js"></script>
     <script src="etc/js/page.js"></script>
-<!--    <script src="etc/js/desktop.js"></script>-->
+    <script src="etc/js/desktop.js"></script>
     <script>
         window.addEventListener('load', function() {
             var div = document.getElementsByClassName('loading')[0];

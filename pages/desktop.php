@@ -34,9 +34,13 @@ $userinfo = $reqsoftware->fetch();
             for ($i = 0; $i < $software_count; $i++) {
                 $appli = json_decode(file_get_contents('bin/' . $software[$i]['code'] . '.json'));
             ?>
-                <div class="icon-desktop" id="<?php echo $software[$i]['id']; ?>" style="height:90px;width:70px;top:<?php echo $software[$i]['toppos']; ?>;left:<?php echo $software[$i]['leftpos']; ?>;">
+                <div class="icon-desktop" id="<?php echo $software[$i]['id']; ?>" style="height:90px;width:70px;
+                        /*top:*/<?php //echo $software[$i]['toppos']; ?>/*;left:*/<?php //echo $software[$i]['leftpos']; ?>/*;*/
+                        ">
                     <img src="<?php print $appli->{'icon'}; ?>">
-                    <span><?php print $appli->{'name'}; ?></span>
+                    <div class="restrictep">
+                        <span><?php print $appli->{'name'}; ?></span>
+                    </div>
                 </div>
             <?php
             }
@@ -85,7 +89,7 @@ $userinfo = $reqsoftware->fetch();
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="etc/js/toolbar.js"></script>
     <script src="etc/js/page.js"></script>
-    <script src="etc/js/desktop.js"></script>
+<!--    <script src="etc/js/desktop.js"></script>-->
     <script>
         window.addEventListener('load', function() {
             var div = document.getElementsByClassName('loading')[0];

@@ -2,21 +2,27 @@ const iconsa = document.getElementsByClassName('icon-desktop');
 
 for (let a = 0; a < iconsa.length; a++) {
     dragElement(iconsa[a]);
+
     function dragElement(blmnt) {
         var bpos1 = 0, bpos2 = 0, bpos3 = 0, bpos4 = 0;
 
         blmnt.onmousedown = dragMouseDown;
+
         function dragMouseDown(b) {
             b = b || window.event;
             b.preventDefault();
             bpos3 = b.clientX;
             bpos4 = b.clientY;
-            
+
             document.onmouseup = closeDragElement;
             document.onmousemove = elementDrag;
         }
-        
+
         function elementDrag(b) {
+            //iconsa[a].style.position = 'absolute';
+
+            iconsa[a].style.whiteSpace = 'normal';
+
             b = b || window.event;
             b.preventDefault();
             bpos1 = bpos3 - b.clientX;
@@ -35,12 +41,14 @@ for (let a = 0; a < iconsa.length; a++) {
             request.open('POST', '?action=drag', true);
             request.send(formData);
         }
-        
+
         function closeDragElement() {
+            iconsa[a].style.whiteSpace = 'nowrap';
+
             document.onmouseup = null;
             document.onmousemove = null;
 
-            
+
         }
     }
 }

@@ -3,4 +3,6 @@
     Deny from all
 </Files>
 
-Options -IndexesOptions -Indexes
+Options -Indexes
+
+ErrorDocument 403 /yo.txt

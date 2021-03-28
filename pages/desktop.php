@@ -20,6 +20,7 @@ $userinfo = $reqsoftware->fetch();
     <div class="head">
         <div class="toolbar">
             <div class="right">
+                <p id="Utility" class="taskb info"><i class="fas fa-info"></i></p>
                 <p id="Ethernet" class="taskb internet"><i class="fas fa-network-wired"></i></p>
                 <p id="Battery" class="taskb battery"><i class="fas fa-battery-full"></i></p>
                 <p id="Date and Time" class="taskb hour"></p>

@@ -69,7 +69,7 @@ $userinfo = $reqsoftware->fetch();
     <?php
     }
     ?>
-    <div class="tiny_box" style="display: none">
+    <div class="tiny_box" style="display: none; z-index: 9999999999999999">
         <div class="header">
             <div class="buttons">
                 <img src="etc/img/button_close.png" class="close" alt="">

@@ -44,7 +44,7 @@ html, body {
     padding: 4px 8px;
     border: 2px solid transparent;
     text-align: center;
-    position: relative;
+    position: absolute;
 }
 .desktop .restrictep {
     width: 100%;
@@ -104,6 +104,10 @@ html, body {
     .window {
         width: 100%;
         height: 100%;
+    }
+
+    .desktop .icon-desktop {
+        position: relative;
     }
 }
 

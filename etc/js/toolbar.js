@@ -89,7 +89,10 @@ window.addEventListener("DOMContentLoaded", () => {
                         m = 1;
                         body.innerHTML = '<div class="box"> <p class="eteindre">Turn off this computer now ?</p><p class="message">You\'re actually connected with "<?php echo $userinfo[\'username\']; ?>"</p><p class="other">You\'ll be disconnected in a few seconds</p><div class="pro_bar"></div><div class="dis_but" onclick="disconnect()">Disconnect</div></div>'
 
-                        setTimeout(disconnect, 15000)
+                        let disco = setTimeout(disconnect, 15000);
+                        close.addEventListener("click", () => {
+                            clearTimeout(disco);
+                        });
                         break;
                 }
 

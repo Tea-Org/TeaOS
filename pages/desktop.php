@@ -94,9 +94,9 @@ $userinfo = $reqsoftware->fetch();
     <script>
         window.addEventListener('load', function() {
             var div = document.getElementsByClassName('loading')[0];
-            div.style = "animation: fade .5s linear;"
+            div.style = "animation: fade .5s linear;";
             setTimeout(() => {
-                div.style.display = "none"
+                div.style.display = "none";
             }, 500);
         })
     </script>
